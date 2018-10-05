@@ -1,0 +1,35 @@
+// Mobile
+@media only screen and (min-width: 320px) {}
+// Tablet 
+@media only screen and (min-width: 768px) {}
+// Desktop 
+@media only screen and (min-width: 1024px) {}
+// Desktop XL
+@media only screen and (min-width: 1280px) {}
+
+mat-toolbar {
+  background: transparent;  
+  .spacer {
+    flex: 1 1 auto;
+  }
+}
+
+.navbar--top {
+  height: 39px !important;
+  background: $color-grayless;
+  border-bottom: 1px solid $color-gray;
+}
+
+.left-nav {
+  display: inline-flex;
+  align-items: center;
+  .discount-wrapper {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 20px;
+    margin: 0 15px;
+    border-left: 1px solid $color-gray;
+    border-right: 1px solid $color-gray;
+    text-transform: capitalize;
+  }
+}
