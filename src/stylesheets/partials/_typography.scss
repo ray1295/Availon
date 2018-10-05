@@ -23,11 +23,12 @@ p {
 // Anchor links 
 a {
   padding: 0 5px;
+  cursor: pointer;
 }
 
 a:hover,
 a:active {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 // Media queries
@@ -51,6 +52,5 @@ a:active {
 
 .subheading {
   @extend %font-shared;
-  color: $color-gray;
 }
 

@@ -31,15 +31,11 @@ html, body {
 
 body {
   @extend %font-shared;
-  font-size: 14px;
   padding: 0;
   margin: 0 auto;
-  display: block;
+  background-color: $color-white;
 }
 
 * {
   box-sizing: border-box;
 }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: 'Roboto', sans-serif; }

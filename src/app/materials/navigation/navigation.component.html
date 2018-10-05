@@ -1,33 +1,73 @@
 <mat-toolbar>
+
+  <!-- Top navigation -->
   <mat-toolbar-row class="navbar--top">
-    <div class="left-nav">
-      <p>International Site</p>
-      <div class="discount-wrapper">
-        <i class="material-icons">chevron_left</i>
-        <li class="">student discount 20% off</li>
-        <i class="material-icons">chevron_right</i>
-      </div>
+
+    <!-- Discount -->
+    <div class="discount-wrapper">
+      <!-- Left slider indicator -->
+      <i class="material-icons">chevron_left</i>
+      <!-- Discount text -->
+      <li class="">student discount 20% off</li>
+      <!-- Right slider indicator -->
+      <i class="material-icons">chevron_right</i>
     </div>
+    <!-- End of Dsicount -->
+
     <span class="spacer"></span>
-    <div>
-      <a class="" routerLink="">Register</a>
-      <a class="" routerLink="">Log In</a>
-      <a routerLink="">Help</a>
-      <i class="material-icons">shopping_cart</i>
-      <img [src]="">
+
+    <div class="navtop--routes navtop--top__right-spacing">
+      <!-- Login/ Register authentication form button-->
+      <a routerLink="">
+        <i class="fas fa-user"></i>
+        join
+      </a>
+      <!-- Wishlist -->
+      <a routerLink="">
+        <i class="fas fa-heart"></i>
+        wishlist
+      </a>
     </div>
 
     <!-- Shopping bag -->
-    <div class="div--cart__count">
-
+    <div class="block--cart__count navtop--routes">
+      <i class="fas fa-shopping-bag"></i>
+      <p>(0)</p>
     </div>
-  </mat-toolbar-row>
-
-  <mat-toolbar-row>
 
   </mat-toolbar-row>
+  <!-- End of top Navigation-->
 
-  <mat-toolbar-row>
-    <span>Third Line</span>
+  <!-- Bottom Navgaiton -->
+  <mat-toolbar-row class="navbar-btm">
+
+    <!-- Categories -->
+    <div>
+      <ul>
+        <li><a class="navbar-btm--category-bar" routerLink="">Men</a></li>
+        <li><a class="navbar-btm--category-bar" routerLink="">Women</a></li>
+        <li><a class="navbar-btm--category-bar" routerLink="">Kids</a></li>
+        <li><a class="navbar-btm--category-bar" routerLink="">Collections</a></li>
+        <li><a class="navbar-btm--category-bar__sale" routerLink="">Sales</a></li>
+      </ul>
+    </div>
+
+    <!-- Logo - Interpolation used to bind logo-->
+    <a>
+      <img class="navbar-btm--logo" src="{{ logoPath }}">
+    </a>
+
+    <!-- Search input-->
+    <form class="navbar-btm--input">
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="Search">
+          <i class="material-icons" matSuffix>
+            search
+          </i>
+      </mat-form-field>
+    </form>
+
   </mat-toolbar-row>
+  <!-- End of bottom navigation -->
+
 </mat-toolbar>

@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 import { SidenavComponent } from './sidenav/sidenav.component';
@@ -14,7 +16,9 @@ import { NavigationComponent } from './navigation/navigation.component';
     CommonModule,
     MatMenuModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   declarations: [
     SidenavComponent,
@@ -27,7 +31,9 @@ import { NavigationComponent } from './navigation/navigation.component';
     MenubarComponent,
     MatToolbarModule,
     NavigationComponent,
-    MatIconModule
+    MatIconModule,
+    MatInputModule,
+    MatFormFieldModule
   ]
 })
 export class MaterialsModule { }

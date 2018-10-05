@@ -7,29 +7,81 @@
 // Desktop XL
 @media only screen and (min-width: 1280px) {}
 
-mat-toolbar {
-  background: transparent;  
+
+// Reseting mat toobar row padding: 16px
+.mat-toolbar-row {
+  padding: 0 !important;
+}
+
+// Resetting mat toolbar background 
+.mat-toolbar {
+  background: transparent;
+  // Space between elements in nav  
   .spacer {
     flex: 1 1 auto;
   }
 }
 
+// Top Navbar 
 .navbar--top {
-  height: 39px !important;
-  background: $color-grayless;
-  border-bottom: 1px solid $color-gray;
-}
-
-.left-nav {
-  display: inline-flex;
-  align-items: center;
+  height: 34px !important;
+  background: $color-dark;
+  color: $color-white;
+  text-transform: capitalize;
+  // Routing links 
+  .navtop--routes {
+    // Routing links with icons
+    i {
+      padding: 0 5px;
+    }
+  }
+  .navtop--top__right-spacing {
+    margin-right: 20px;
+  }
+  // Discount 
   .discount-wrapper {
     display: inline-flex;
     align-items: center;
-    padding: 7px 20px;
-    margin: 0 15px;
-    border-left: 1px solid $color-gray;
-    border-right: 1px solid $color-gray;
-    text-transform: capitalize;
+  }
+  // Shopping cart
+  .block--cart__count {
+    background: $color-white;
+    color: $color-dark;
+    text-align: center;
+    width: 100px;
+    p {
+      margin: 5px 0;
+    }
+  }
+}
+
+.navbar-btm {
+  justify-content: space-between;
+  // Shopping category 
+  &--category-bar {
+    height: 64px;
+    align-items: center;
+    align-content: center;
+    font-weight: 500;
+    display: inline-flex;
+    // Sale category 
+    &__sale {
+    color: $color-bright
+    } 
+    // Hover, focus, active effect
+    &:hover, 
+    &:focus, 
+    &:active {
+    border-bottom: 2px solid $color-dark;
+    }
+  }
+  &--logo {
+    width: 140px;
+  }
+  &--input {
+    // width: 180px;
+  }
+  &--spacer {
+    flex: 1;
   }
 }

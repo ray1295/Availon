@@ -39,7 +39,6 @@ button {
 
 .disabled {
   @extend %button-shared;
-  background-color: $color-gray;
 }
 
 .info {
