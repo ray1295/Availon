@@ -1,5 +1,5 @@
 %font-shared {
-  font: Normal Normal 400 14px/150% 'Roboto', sans-serif;
+  font: Normal Normal 400 13px/150% 'Roboto', sans-serif !important;
   letter-spacing: -.02em;
   text-decoration: none;
   text-align: left;
@@ -12,6 +12,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
   font-family: 'Roboto', sans-serif;
   margin: 0;
   line-height: initial;
+  font-weight: 400;
 }
 
 // Paragraphs
@@ -22,6 +23,7 @@ p {
 
 // Anchor links 
 a {
+  color: $color-dark;
   padding: 0 5px;
   cursor: pointer;
 }

@@ -5,11 +5,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { RouterModule } from "@angular/router";
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { MenubarComponent } from './menubar/menubar.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { SlidertextComponent } from './slidertext/slidertext.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   imports: [
@@ -18,12 +22,16 @@ import { NavigationComponent } from './navigation/navigation.component';
     MatToolbarModule,
     MatIconModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    RouterModule, 
+    MatDialogModule
   ],
   declarations: [
     SidenavComponent,
     MenubarComponent,
-    NavigationComponent
+    NavigationComponent,
+    SlidertextComponent,
+    RegisterComponent
   ],
   exports: [
     SidenavComponent, 
@@ -33,7 +41,10 @@ import { NavigationComponent } from './navigation/navigation.component';
     NavigationComponent,
     MatIconModule,
     MatInputModule,
-    MatFormFieldModule
-  ]
+    MatFormFieldModule,
+    SlidertextComponent,
+    MatDialogModule,
+    RegisterComponent
+    ]
 })
 export class MaterialsModule { }
