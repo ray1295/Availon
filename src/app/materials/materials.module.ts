@@ -7,51 +7,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { RouterModule } from "@angular/router";
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatCardModule } from  '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatButtonModule } from '@angular/material/button';
 
-import { SidenavComponent } from './sidenav/sidenav.component';
-import { MenubarComponent } from './menubar/menubar.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { SlidertextComponent } from './slidertext/slidertext.component';
-import { RegisterComponent } from './register/register.component';
-import { WishlistComponent } from '../wishlist/wishlist.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    MatMenuModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatInputModule,
-    MatFormFieldModule,
-    RouterModule, 
-    MatDialogModule,
-    MatCardModule,
-    MatExpansionModule,
-    WishlistComponent
-  ],
-  declarations: [
-    SidenavComponent,
-    MenubarComponent,
-    NavigationComponent,
-    SlidertextComponent,
-    RegisterComponent,
-  ],
-  exports: [
-    SidenavComponent, 
-    MatMenuModule,
-    MenubarComponent,
-    MatToolbarModule,
-    NavigationComponent,
-    MatIconModule,
-    MatInputModule,
-    MatFormFieldModule,
-    SlidertextComponent,
-    MatDialogModule,
-    RegisterComponent,
-    MatCardModule,
-    MatExpansionModule
-  ]
+  imports: [CommonModule, MatMenuModule, MatToolbarModule, MatIconModule, MatInputModule, MatFormFieldModule, RouterModule, MatDialogModule, MatCardModule, MatExpansionModule, MatButtonModule],
+  declarations: [ ],
+  exports: [ MatMenuModule, MatToolbarModule, MatIconModule, MatInputModule, MatFormFieldModule, MatDialogModule, MatCardModule, MatExpansionModule, MatButtonModule ]
 })
 export class MaterialsModule { }

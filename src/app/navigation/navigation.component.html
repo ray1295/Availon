@@ -1,0 +1,103 @@
+<!-- Navigation -->
+<mat-toolbar>
+
+  <!-- Top navigation -->
+  <mat-toolbar-row class="navbar-top">
+
+    <!-- International site recognition -->
+    <p class="navbar-top__international">international site</p>
+
+    <!-- Country recognition -->
+    <!-- [INCOMPLETE]: Recognise persons country -->
+    <div class="navbar-top__country">
+      <img class="navbar-top__country--flag" src="{{ countryPath }}">
+    </div>
+
+    <!-- Discount -->
+    <!-- [INCOMPLETE]: Make each message link to a page -->
+    <div class="navbar-top__discount-wrapper">
+      <!-- Discount text component -->
+      <app-slidertext></app-slidertext>
+    </div>
+    <!-- End of Dsicount -->
+
+    <!-- Logo - Interpolation used to bind logo-->
+    <a class="navbar-top__logo-wrapper" routerLink="">
+      <img class="navbar-top__logo" src="{{ logoPath }}">
+    </a>
+
+    <div class="navbar-top__routes">
+      <!-- Login/ Register authentication form button-->
+      <app-register></app-register>
+      <!-- Wishlist -->
+      <a routerLink="wishlist">
+        <i class="material-icons">favorite_border</i>
+      </a>
+      <!-- Handbag -->
+      <app-handbag></app-handbag>
+      <!-- Search input-->
+      <i class="material-icons">search</i>
+      <!-- Help: Customer care -->
+      <a class="navbar-top__routes--help" routerLink="/help" routerLinkActive="active">
+        <p class="navbar-top__routes--text">customer care</p>
+        <i class="material-icons">
+          help_outline
+        </i>
+      </a>
+    </div>
+
+    <!-- Search input-->
+    <!-- <form class="navbar-top__input">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Search">
+            <i class="material-icons" matSuffix>
+              search
+            </i>
+          </mat-form-field>
+        </form> -->
+
+  </mat-toolbar-row>
+  <!-- End of top Navigation-->
+
+  <!-- Bottom Navgaiton -->
+  <mat-toolbar-row class="navbar-btm">
+
+    <!-- Categories -->
+    <ul class="navbar-btm__category-bar">
+      <!-- New in category bar -->
+      <li><button class="navbar-btm__bar" routerLink="">new in</button></li>
+      <!-- Sales category bar -->
+      <li><button class="navbar-btm__bar navbar-btm__bar--bright" routerLink="">sales</button></li>
+      <!-- Women category bar -->
+      <li><button class="navbar-btm__bar" routerLink="">women</button></li>
+      <!-- Men category bar -->
+      <!-- [INCOMPLETE]: Make into a component -->
+      <li>
+        <app-men-catg></app-men-catg>
+      </li>
+      <!-- Boys category bar -->
+      <li><button class="navbar-btm__bar" routerLink="">boys</button></li>
+      <!-- Girls category bar -->
+      <li><button class="navbar-btm__bar" routerLink="">girls</button></li>
+      <!-- Collections category bar -->
+      <li><button class="navbar-btm__bar" routerLink="">collections</button></li>
+      <!-- Shoes category bar -->
+      <li><button class="navbar-btm__bar" routerLink="">shoes</button></li>
+      <!-- Accessories category bar -->
+      <li><button class="navbar-btm__bar" routerLink="">accessories</button></li>
+      <!-- Inspire me category bar -->
+      <li><button class="navbar-btm__bar" routerLink="">inspire me</button></li>
+      <!-- Sports category bar -->
+      <li><button class="navbar-btm__bar" routerLink="">sports</button></li>
+      <!-- Brands category bar -->
+      <li><button class="navbar-btm__bar" routerLink="">brands</button></li>
+      <!-- Premium category bar -->
+      <li><button class="navbar-btm__bar" routerLink="">premium</button></li>
+    </ul>
+    <!-- End of Categories -->
+
+  </mat-toolbar-row>
+  <!-- End of bottom navigation -->
+
+</mat-toolbar>
+<!-- End of navigation -->
