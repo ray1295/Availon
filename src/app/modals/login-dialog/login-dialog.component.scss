@@ -1,0 +1,73 @@
+// Mobile
+@media only screen and (min-width: 320px) {}
+// Tablet 
+@media only screen and (min-width: 768px) {}
+// Desktop 
+@media only screen and (min-width: 1024px) {}
+// Desktop XL
+@media only screen and (min-width: 1280px) {}
+
+// Modal form container 
+.form__container {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    // Modal form image container
+    .form__image{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        // Modal form image element
+        &__field {
+        width: 200px;
+        }
+    }
+    // Modal form content
+    .form__field {
+        flex: 2;
+        padding: 0 20px;
+        // Form close button 
+        &__close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: none;
+            padding: 10px;
+            text-align: right;
+        }
+        // Register text 
+        &__register {
+            font-size: 16px; 
+            margin-bottom: 20px;
+        }
+        // Form content wrapper  
+        .mat-dialog-content {
+            overflow: hidden;
+        }
+        // Form inputs 
+        &__input {
+            width: 100%;
+            display: block;
+        }
+        // Action buttons wrappers
+        &__actions {
+            // Forgotten password button link
+            a {
+                display: inline-flex;
+                align-items: center;
+                flex: 1;
+                padding: 0;
+            }
+            // Action buttons 
+            button {
+                border: none;
+                background-color: $color-bright; 
+                color: $color-white; 
+                padding: 10px 30px;
+            }
+        }
+    }
+}

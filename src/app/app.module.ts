@@ -32,10 +32,11 @@ import { BrandsCatgComponent } from './brands-catg/brands-catg.component';
 import { PremiumCatgComponent } from './premium-catg/premium-catg.component';
 
 import { UserService } from './service/user.service';
+import { SearchNavComponent } from './search-nav/search-nav.component';
 
 
 @NgModule({
-  declarations: [AppComponent, routingComponents, HomeComponent, RegisterDialogComponent, UserComponent, UserListComponent, RegisterComponent, NavigationComponent, SlidertextComponent, WishlistComponent, HandbagComponent, MenCatgComponent, NewinCatComponent, SalesCatgComponent, WomenCatgComponent, BoysCatgComponent, GirlsCatgComponent, CollectionCatgComponent, ShoesCatgComponent, AccessoriesCatgComponent, InspireCatgComponent, SportsCatgComponent, BrandsCatgComponent, PremiumCatgComponent, LoginComponent, LoginDialogComponent ],
+  declarations: [AppComponent, routingComponents, HomeComponent, RegisterDialogComponent, UserComponent, UserListComponent, RegisterComponent, NavigationComponent, SlidertextComponent, WishlistComponent, HandbagComponent, MenCatgComponent, NewinCatComponent, SalesCatgComponent, WomenCatgComponent, BoysCatgComponent, GirlsCatgComponent, CollectionCatgComponent, ShoesCatgComponent, AccessoriesCatgComponent, InspireCatgComponent, SportsCatgComponent, BrandsCatgComponent, PremiumCatgComponent, LoginComponent, LoginDialogComponent, SearchNavComponent ],
   imports: [BrowserModule, AppRoutingModule, MaterialsModule, BrowserAnimationsModule, FormsModule, ReactiveFormsModule],
   exports: [FormsModule, ReactiveFormsModule],
   providers: [UserService, UserListComponent],

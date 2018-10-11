@@ -24,19 +24,13 @@
       <!-- Login/ Register authentication form button-->
       <app-login></app-login>
       <!-- Wishlist -->
-      <a routerLink="wishlist"><i class="material-icons">favorite_border</i></a>
+      <button class="navbar-btm__bar"routerLink="wishlist">
+        <i class="material-icons">favorite_border</i>
+      </button>
       <!-- Handbag -->
       <app-handbag></app-handbag>
       <!-- Search input-->
-      <i class="material-icons">search</i>
-    <!-- <form class="navbar-top__input">
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Search">
-            <i class="material-icons" matSuffix>
-              search
-            </i>
-          </mat-form-field>
-        </form> -->
+      <app-search-nav></app-search-nav>
       <!-- Help: Customer care -->
       <a class="navbar-top__routes--help" routerLink="/help" routerLinkActive="active">
         <p class="navbar-top__routes--text">customer care</p>

@@ -5,15 +5,22 @@ import { UserData } from "../../login/login.component";
 @Component({
   selector: 'app-login-dialog',
   templateUrl: './login-dialog.component.html',
-  styleUrls: ['./login-dialog.component.scss']
+  // styleUrls: ['./login-dialog.component.scss']
 })
 export class LoginDialogComponent implements OnInit {
+
+  loginModalPath: string = '/assets/images/availon_poster.png';
+  hide = true;
 
   constructor(public dialogRef: MatDialogRef<LoginDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: UserData) { }
 
-    onNoClick(): void {
+    onCloseCancel(): void {
       this.dialogRef.close();
+    }
+
+    onCloseConfirm(): void {
+      
     }
 
   ngOnInit() {
