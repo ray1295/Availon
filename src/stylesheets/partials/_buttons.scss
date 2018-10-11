@@ -45,8 +45,3 @@ button {
   @extend %button-shared ;
   background-color: $color-info;
 }
-
-.bright {
-  @extend %button-shared;
-  background-color: $color-bright;
-}

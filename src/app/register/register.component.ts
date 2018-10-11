@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { RegisterDialogComponent } from '../modals/register-dialog/register-dialog.component';
 
 export interface UserData {
   user: string;
@@ -23,9 +24,11 @@ export class RegisterComponent implements OnInit {
   passwordConfirmation: string;
 
   constructor(public dialog: MatDialog) { }
-  openDialog() {
-    const dialogRef = this.dialog.open(RegisterComponent, {
-      width: '400px',
+  openDialog(): void {
+    let dialogRef = this.dialog.open(RegisterDialogComponent, {
+      height: '400px',
+      width: '600px',
+      // Using 'data' to pass information to dialog component 
       data: {
         user: this.user,
         email: this.email,
@@ -36,27 +39,12 @@ export class RegisterComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      this.user = result
+      this.user = result;
     });
   }
 
   ngOnInit() {
-  }
-
-}
-
-@Component({
-  selector: 'app-register-dialog',
-  templateUrl: './register.component.html',
-})
-export class RegisterComponentDialog {
-
-  constructor(
-    public dialogRef: MatDialogRef<RegisterComponentDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: UserData) {}
-
-  onNoClick(): void {
-    this.dialogRef.close();
+    
   }
 
 }

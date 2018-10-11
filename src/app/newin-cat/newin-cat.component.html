@@ -1,0 +1,39 @@
+<button class="navbar-btm__bar" [matMenuTriggerFor]="menu">new in</button>
+<mat-menu #menu="matMenu" [overlapTrigger]="false">
+  <div class="navbar-btm__bar__col">
+    <h6>new in</h6>
+    <hr>
+    <a mat-menu-item class="navbar-btm__category-bar-items">view all </a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">new in today </a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">new in this week</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">back in stock</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">new in clothing</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">new in dresses</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">new in tops</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">new in coats & jackets</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">new in beauty</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">new in shoes </a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">new in accessories</a>
+  </div>
+  <div class="navbar-btm__bar__col">
+      <h6>new at availon</h6>
+      <hr>
+      <a mat-menu-item class="navbar-btm__category-bar-items">anello</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">boohooMan</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">libertime-libertime</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">massimo dutti</a>
+      <h6>style tips</h6>
+      <hr>
+      <a mat-menu-item class="navbar-btm__category-bar-items">blogs</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">style studio</a>
+  </div>
+  <div class="navbar-btm__bar__col">
+    <img class="img__model" src="{{ newInModelPath1 }}">
+  </div>
+  <div class="navbar-btm__bar__col">
+    <img class="img__model" src="{{ newInModelPath2 }}">
+  </div>
+  <div class="navbar-btm__bar__col">
+    <img class="img__model" src="{{ newInModelPath3 }}">
+  </div>
+</mat-menu>
