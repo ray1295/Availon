@@ -1,0 +1,13 @@
+<button class="navbar-btm__bar" [matMenuTriggerFor]="menu">
+    <i class="material-icons">search</i>
+</button>
+<mat-menu #menu="matMenu" [overlapTrigger]="false">
+<form class="navbar-top__input">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Search">
+        <i class="material-icons" matSuffix>
+          search
+        </i>
+      </mat-form-field>
+    </form>
+</mat-menu>

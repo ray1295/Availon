@@ -1,0 +1,50 @@
+<button class="navbar-btm__bar bright" [matMenuTriggerFor]="menu">sales</button>
+<mat-menu #menu="matMenu" [overlapTrigger]="false">
+    <div class="navbar-btm__bar__col">
+      <h6>shop by price</h6>
+      <hr>
+      <a mat-menu-item class="navbar-btm__category-bar-items">sale under £4</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">sale under £9</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">sale under £12</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">All new arrivals</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">Brands</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">Sale</a>
+      <br>
+      <h6 class="bright">up to 90% off</h6>
+      <h6 class="bright">uk clearance sale</h6>
+      <br>
+      <h6>big clearance up to 80% off</h6>
+      <h6>hot sale</h6>
+      <h6>availon sale </h6>
+      <h6>new in sale</h6>      
+    </div>
+    <div class="navbar-btm__bar__col">
+      <h6>shop all sale</h6>
+      <hr>
+      <a mat-menu-item class="navbar-btm__category-bar-items">shop dresses</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">shop swimwear</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">shop blouses</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">shop t-shirt </a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">shop bottoms</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">shop accessories</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">shop bags</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">shop shoes</a>
+      <h6>men</h6>
+      <hr>
+      <a mat-menu-item class="navbar-btm__category-bar-items">all sale</a>
+      <h6>kids</h6>
+      <hr>
+      <a mat-menu-item class="navbar-btm__category-bar-items">all sale</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">shop girl dresses</a>
+      <a mat-menu-item class="navbar-btm__category-bar-items">shop girl tops</a>
+    </div>
+    <div class="navbar-btm__bar__col">
+        <img class="img__model" src="{{ salesModelPath1 }}">
+    </div>
+    <div class="navbar-btm__bar__col">
+        <img class="img__model" src="{{ salesModelPath2 }}">
+    </div>
+    <div class="navbar-btm__bar__col">
+      <img class="img__model" src="{{ salesModelPath3 }}">
+    </div>
+  </mat-menu>

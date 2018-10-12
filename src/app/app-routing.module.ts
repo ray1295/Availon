@@ -1,10 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { HelpComponent } from './help/help.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { HomeComponent } from './home/home.component';
+import { WishlistComponent } from "./wishlist/wishlist.component";
+
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'help', component: HelpComponent },
+  { path: 'checkout', component: CheckoutComponent },
+  { path: 'wishlist', component: WishlistComponent }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const routingComponents = [HelpComponent, CheckoutComponent, HomeComponent, WishlistComponent]

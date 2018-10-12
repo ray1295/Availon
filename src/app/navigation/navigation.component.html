@@ -1,0 +1,80 @@
+<!-- Navigation -->
+<mat-toolbar>
+  <!-- Top navigation -->
+  <mat-toolbar-row class="navbar-top">
+    <!-- International site recognition -->
+    <p class="navbar-top__international">international site</p>
+    <!-- Country recognition -->
+    <!-- [INCOMPLETE]: Recognise persons country -->
+    <div class="navbar-top__country">
+      <img class="navbar-top__country--flag" src="{{ countryPath }}">
+    </div>
+    <!-- Discount -->
+    <!-- [INCOMPLETE]: Make each message link to a page -->
+    <div class="navbar-top__discount-wrapper">
+      <!-- Discount text component -->
+      <app-slidertext></app-slidertext>
+    </div>
+    <!-- Logo - Interpolation used to bind logo-->
+    <a class="navbar-top__logo-wrapper" routerLink="">
+      <img class="navbar-top__logo" src="{{ logoPath }}">
+    </a>
+
+    <div class="navbar-top__routes">
+      <!-- Login/ Register authentication form button-->
+      <app-login></app-login>
+      <!-- Wishlist -->
+      <button class="navbar-btm__bar"routerLink="wishlist">
+        <i class="material-icons">favorite_border</i>
+      </button>
+      <!-- Handbag -->
+      <app-handbag></app-handbag>
+      <!-- Search input-->
+      <app-search-nav></app-search-nav>
+      <!-- Help: Customer care -->
+      <a class="navbar-top__routes--help" routerLink="/help" routerLinkActive="active">
+        <p class="navbar-top__routes--text">customer care</p>
+        <i class="material-icons">
+          help_outline
+        </i>
+      </a>
+    </div>
+  </mat-toolbar-row>
+  <!-- End of top Navigation-->
+
+  <!-- Bottom Navgaiton -->
+  <mat-toolbar-row class="navbar-btm">
+    <!-- Categories -->
+    <ul class="navbar-btm__category-bar">
+      <!-- New in category bar -->
+      <li><app-newin-cat></app-newin-cat></li>
+      <!-- Sales category bar -->
+      <li><app-sales-catg></app-sales-catg></li>
+      <!-- Women category bar -->
+      <li><app-women-catg></app-women-catg></li>
+      <!-- Men category bar -->
+      <li><app-men-catg></app-men-catg></li>
+      <!-- Boys category bar -->
+      <li><app-boys-catg></app-boys-catg></li>
+      <!-- Girls category bar -->
+      <li><app-girls-catg></app-girls-catg></li>
+      <!-- Collections category bar -->
+      <li><app-collection-catg></app-collection-catg></li>
+      <!-- Shoes category bar -->
+      <li><app-shoes-catg></app-shoes-catg></li>
+      <!-- Accessories category bar -->
+      <li><app-accessories-catg></app-accessories-catg></li>
+      <!-- Inspire me category bar -->
+      <li><app-inspire-catg></app-inspire-catg></li>
+      <!-- Sports category bar -->
+      <li><app-sports-catg></app-sports-catg></li>
+      <!-- Brands category bar -->
+      <li><app-brands-catg></app-brands-catg></li>
+      <!-- Premium category bar -->
+      <li><app-premium-catg></app-premium-catg></li>
+    </ul>
+    <!-- End of Categories -->
+  </mat-toolbar-row>
+  <!-- End of bottom navigation -->
+</mat-toolbar>
+<!-- End of navigation -->

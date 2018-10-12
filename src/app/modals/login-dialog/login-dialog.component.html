@@ -1,0 +1,43 @@
+<!-- Login modal-->
+<div class="form__container">
+  <!-- Login modal image -->
+  <div class="form__image">
+    <img class="form__image__field" src="{{ loginModalPath }}">
+  </div>
+  <!-- Login modal form -->
+  <div class="form__field">
+    <mat-dialog-content>
+      <!-- Close modal button -->
+      <button class="form__field__close" (click)="onCloseCancel()" [mat-dialog-close]="true">
+          <i class="material-icons">
+            close
+          </i>
+      </button>
+      <!-- Sign up redirect message/button -->
+      <p class="form__field__register">Don't have an account?
+        <a class="bright" routerLink=""> Sign up.</a>
+      </p>
+      <!-- Username and email input -->
+      <mat-form-field class="form__field__input">
+        <input matInput placeholder="Username or Email">
+      </mat-form-field>
+      <!-- Password input -->
+      <mat-form-field class="form__field__input">
+        <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'">
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+      </mat-form-field>
+    </mat-dialog-content>
+    <!-- Action buttons -->
+    <mat-dialog-actions class="form__field__actions">
+      <!-- Forgotten password -->
+      <!-- [INCOMPLETE]: Create forgotten password page -->
+      <a class="bright" routerLink="">Forgot your passwrod?</a>
+      <!-- Submit button  -->
+      <!-- [INCOMPLETE]: oncloseConfirm function to login user in -->
+      <button (click)="onCloseConfirm()" mat-dialog-close>Sign In</button>
+    </mat-dialog-actions>
+    <!-- End of action button -->
+  </div>
+  <!-- End of login form -->
+</div>
+<!-- End of login modal-->
