@@ -2,12 +2,18 @@ import { Component, OnInit, inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { LoginDialogComponent } from "../modals/login-dialog/login-dialog.component";
 
+// INTERFACE:
+// ----------
+// Class that describes what keys and values should exist in a property.
+// TS validates interface - throws error when propety is missing.
+// Seprated by commas
+
 export interface UserData {
-  user: string;
-  email: string;
-  name: string;
-  password: string;
-  passwordConfirmation: string;
+  user: string,
+  email: string,
+  name: string,
+  password: string,
+  passwordConfirmation: string,
 }
 
 @Component({
@@ -28,7 +34,6 @@ export class LoginComponent implements OnInit {
       let dialogRef = this.dialog.open(LoginDialogComponent, {
         height: '400px',
         width: '600px',
-        // Using 'data' to pass information to dialog component 
         data: {
           user: this.user,
           email: this.email,
