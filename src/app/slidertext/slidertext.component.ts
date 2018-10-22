@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SlidertextComponent implements OnInit {
   
+  // Date Binding: {{ sliderAd }} in HTML file 
+  // Dynamic content
+  sliderAd: string = "free standard shipping!";
+
   constructor() {}
 
   ngOnInit() {
