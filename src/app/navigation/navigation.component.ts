@@ -13,11 +13,5 @@ export class NavigationComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // let message: string = "Hello World";
-
-    // function log(message) {
-    //   console.log(message);
-    // }
-    // log(message);
   }
 }

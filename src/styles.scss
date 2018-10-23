@@ -22,7 +22,8 @@
 // Components SCSS
 @import "app/navigation/navigation.component.scss";
 @import "app/slidertext/slidertext.component.scss";
-
+@import "app/search-nav/search-nav.component.scss";
+@import "app/footer/footer.component.scss";
 // Modals
 @import "app/modals/login-dialog/login-dialog.component.scss";
 
@@ -36,7 +37,6 @@ body {
   @extend %font-shared;
   padding: 0;
   margin: 0 auto;
-  background-color: $color-light-gray;
 }
 
 * {

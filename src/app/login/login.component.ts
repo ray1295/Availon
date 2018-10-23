@@ -42,10 +42,6 @@ export class LoginComponent implements OnInit {
           passwordConfirmation: this.passwordConfirmation,
         }
       });
-
-      dialogRef.afterClosed().subscribe(result => {
-        this.user = result;
-      });
     }
 
   ngOnInit() {

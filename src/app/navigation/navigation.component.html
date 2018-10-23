@@ -1,44 +1,49 @@
 <!-- Navigation -->
 <mat-toolbar>
+
   <!-- Top navigation -->
   <mat-toolbar-row class="navbar-top">
-    <!-- International site recognition -->
-    <p class="navbar-top__international">international site</p>
+
     <!-- Country recognition -->
-    <!-- [INCOMPLETE]: Recognise persons country -->
     <div class="navbar-top__country">
-      <img class="navbar-top__country--flag" src="{{ countryPath }}">
+      <!-- International site recognition -->
+      <!-- [INCOMPLETE]: Recognise persons country -->
+      <p>international site</p>
+      <div class="navbar-top__country--flag__wrapper">
+        <img src="{{ countryPath }}">
+      </div>
     </div>
+
     <!-- Discount -->
     <!-- [INCOMPLETE]: Make each message link to a page -->
     <div class="navbar-top__discount-wrapper">
       <!-- Discount text component -->
       <app-slidertext></app-slidertext>
     </div>
+
     <!-- Logo - Interpolation used to bind logo-->
     <a class="navbar-top__logo-wrapper" routerLink="">
       <img class="navbar-top__logo" src="{{ logoPath }}">
     </a>
 
+    <!-- Navtop - Right content -->
     <div class="navbar-top__routes">
+      <!-- Search input-->
+      <app-search-nav></app-search-nav>
+      <!-- Help: Customer care -->
+      <button class="" routerLink="/help" routerLinkActive="active">help</button>
       <!-- Login/ Register authentication form button-->
       <app-login></app-login>
       <!-- Wishlist -->
-      <button class="navbar-btm__bar" routerLink="wishlist">
+      <button class="" routerLink="wishlist">
         <i class="material-icons">favorite_border</i>
       </button>
       <!-- Handbag -->
       <app-handbag></app-handbag>
-      <!-- Search input-->
-      <app-search-nav></app-search-nav>
-      <!-- Help: Customer care -->
-      <a class="navbar-top__routes--help" routerLink="/help" routerLinkActive="active">
-        <p class="navbar-top__routes--text">customer care</p>
-        <i class="material-icons">
-          help_outline
-        </i>
-      </a>
+      <!-- End navtop - Right content -->
+
     </div>
+
   </mat-toolbar-row>
   <!-- End of top Navigation-->
 
@@ -47,31 +52,57 @@
     <!-- Categories -->
     <ul class="navbar-btm__category-bar">
       <!-- New in category bar -->
-      <li><app-newin-cat></app-newin-cat></li>
+      <li>
+        <app-newin-cat></app-newin-cat>
+      </li>
       <!-- Sales category bar -->
-      <li><app-sales-catg></app-sales-catg></li>
+      <li>
+        <app-sales-catg></app-sales-catg>
+      </li>
       <!-- Women category bar -->
-      <li><app-women-catg></app-women-catg></li>
+      <li>
+        <app-women-catg></app-women-catg>
+      </li>
       <!-- Men category bar -->
-      <li><app-men-catg></app-men-catg></li>
+      <li>
+        <app-men-catg></app-men-catg>
+      </li>
       <!-- Boys category bar -->
-      <li><app-boys-catg></app-boys-catg></li>
+      <li>
+        <app-boys-catg></app-boys-catg>
+      </li>
       <!-- Girls category bar -->
-      <li><app-girls-catg></app-girls-catg></li>
+      <li>
+        <app-girls-catg></app-girls-catg>
+      </li>
       <!-- Collections category bar -->
-      <li><app-collection-catg></app-collection-catg></li>
+      <li>
+        <app-collection-catg></app-collection-catg>
+      </li>
       <!-- Shoes category bar -->
-      <li><app-shoes-catg></app-shoes-catg></li>
+      <li>
+        <app-shoes-catg></app-shoes-catg>
+      </li>
       <!-- Accessories category bar -->
-      <li><app-accessories-catg></app-accessories-catg></li>
+      <li>
+        <app-accessories-catg></app-accessories-catg>
+      </li>
       <!-- Inspire me category bar -->
-      <li><app-inspire-catg></app-inspire-catg></li>
+      <li>
+        <app-inspire-catg></app-inspire-catg>
+      </li>
       <!-- Sports category bar -->
-      <li><app-sports-catg></app-sports-catg></li>
+      <li>
+        <app-sports-catg></app-sports-catg>
+      </li>
       <!-- Brands category bar -->
-      <li><app-brands-catg></app-brands-catg></li>
+      <li>
+        <app-brands-catg></app-brands-catg>
+      </li>
       <!-- Premium category bar -->
-      <li><app-premium-catg></app-premium-catg></li>
+      <li>
+        <app-premium-catg></app-premium-catg>
+      </li>
     </ul>
     <!-- End of Categories -->
   </mat-toolbar-row>

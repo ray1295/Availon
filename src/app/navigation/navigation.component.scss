@@ -8,11 +8,6 @@
 @media only screen and (min-width: 1280px) {}
 
 
-// Reseting mat toolbar row
-.mat-toolbar-row {
-  padding: 0 20px !important;
-}
-
 // Resetting mat toolbar  
 .mat-toolbar {
   background: $color-white;
@@ -41,16 +36,17 @@
   color: $color-dark;
   border-bottom: 1px solid $color-light-gray;
   text-transform: capitalize;
-  // International site text
-  &__international {
-    flex: 1;
-  }
   // Country location
   &__country{
+    display: inline-flex;
     flex: 1;
-    line-height: 0;
-    &--flag {
-      width: 18px;
+    &--flag__wrapper {
+      height: 48px;
+      line-height: 55px;
+      margin-left: 10px;
+      img {
+        width: 18px;
+      }
     }
   }
   // Discount wrapper 
@@ -64,6 +60,7 @@
     flex: 3;
     display: inline-flex;
     justify-content: center;
+    align-items: center;
   }
   // Logo element
   &__logo {
@@ -72,28 +69,21 @@
   }
   // Routing links 
   &__routes {
-    text-align: right;
-    line-height: unset;
+    display: inline-flex;
+    justify-content: flex-end;
     flex: 5;
+    // Routing buttons
+    button {
+      border: none;
+      padding: 0 11px;
+      height: 48px;
+      min-width: auto;
+      text-transform: capitalize;
+    }
     // Routing links icon
     i {
-      padding: 0 5px;
-      line-height: 48px;
-      top: 4px;
+      vertical-align: middle;
       position: relative;
-    }
-    // Help link
-    &--help {
-      border-left: 1px solid #f5f5f5;
-      text-align: right;
-      display: inline-block;
-      line-height: 48px;
-      height: 50px;
-      padding-left: 30px;
-      margin-left: 20px;
-    }
-    &--text {
-      vertical-align: super;
     }
   }
 }
@@ -101,6 +91,7 @@
 .navbar-btm {
   height: 48px !important;
   justify-content: center;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,.1);
   // Shopping category 
   &__category-bar {
     height: 100%;

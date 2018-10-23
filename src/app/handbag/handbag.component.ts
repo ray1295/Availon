@@ -7,7 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HandbagComponent implements OnInit {
 
-  constructor() { }
+  bagContents: number  = 0;
+  noBagContent: string = "Your Bag Is Empty";
+
+  // Method definition
+  gethandBagContent() {
+    return this.bagContents;
+  };
+
+  constructor() { 
+
+  }
 
   ngOnInit() {
   }
