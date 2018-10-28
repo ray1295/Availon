@@ -1,3 +1,25 @@
 footer {
+    color: $color-white;
     background-color: $color-darking;
+    .footer__sign-up {
+        background: $color-gray;
+        &__header {}
+        &__text {}
+        &__follow__header {}
+        &__follow__img {}
+    }
+    .footer__m-content {}
+    .footer__b-content {
+        border-top: 1px soild; 
+        margin-top: 42px;
+        padding: 12px 0 0 0;
+        text-transform: capitalize;
+        &__top{
+            display: inline-flex;
+            &-left {}
+            &-right {}
+        }
+        &__btm {}
+    }
 }
+
