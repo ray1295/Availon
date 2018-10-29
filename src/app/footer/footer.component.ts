@@ -9,6 +9,8 @@ import {FormControl, Validators} from '@angular/forms';
 
 export class FooterComponent implements OnInit {
 
+  countryPath:string = "./assets/images/england_logo.png"
+  
   constructor() { }
 
   ngOnInit() {

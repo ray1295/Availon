@@ -25,13 +25,9 @@ import { SalesCatgComponent } from './sales-catg/sales-catg.component';
 import { WomenCatgComponent } from './women-catg/women-catg.component';
 import { BoysCatgComponent } from './boys-catg/boys-catg.component';
 import { GirlsCatgComponent } from './girls-catg/girls-catg.component';
-import { CollectionCatgComponent } from './collection-catg/collection-catg.component';
 import { ShoesCatgComponent } from './shoes-catg/shoes-catg.component';
 import { AccessoriesCatgComponent } from './accessories-catg/accessories-catg.component';
-import { InspireCatgComponent } from './inspire-catg/inspire-catg.component';
 import { SportsCatgComponent } from './sports-catg/sports-catg.component';
-import { BrandsCatgComponent } from './brands-catg/brands-catg.component';
-import { PremiumCatgComponent } from './premium-catg/premium-catg.component';
 import { SearchNavComponent } from './search-nav/search-nav.component';
 import { FooterComponent } from './footer/footer.component';
 
@@ -41,7 +37,7 @@ import { LoginAuthHomeComponent } from './login-auth-home/login-auth-home.compon
 
 
 @NgModule({
-  declarations: [AppComponent, routingComponents, HomeComponent, RegisterDialogComponent, UserComponent, UserListComponent, RegisterComponent, NavigationComponent, SlidertextComponent, WishlistComponent, HandbagComponent, MenCatgComponent, NewinCatComponent, SalesCatgComponent, WomenCatgComponent, BoysCatgComponent, GirlsCatgComponent, CollectionCatgComponent, ShoesCatgComponent, AccessoriesCatgComponent, InspireCatgComponent, SportsCatgComponent, BrandsCatgComponent, PremiumCatgComponent, LoginComponent, LoginDialogComponent, SearchNavComponent, FooterComponent, LoginAuthHomeComponent],
+  declarations: [AppComponent, routingComponents, HomeComponent, RegisterDialogComponent, UserComponent, UserListComponent, RegisterComponent, NavigationComponent, SlidertextComponent, WishlistComponent, HandbagComponent, MenCatgComponent, NewinCatComponent, SalesCatgComponent, WomenCatgComponent, BoysCatgComponent, GirlsCatgComponent, ShoesCatgComponent, AccessoriesCatgComponent, SportsCatgComponent, LoginComponent, LoginDialogComponent, SearchNavComponent, FooterComponent, LoginAuthHomeComponent],
   imports: [BrowserModule, AppRoutingModule, MaterialsModule, HttpClientModule, BrowserAnimationsModule, FormsModule, ReactiveFormsModule, HttpModule],
   exports: [FormsModule, ReactiveFormsModule],
   providers: [UserService, UserListComponent],
