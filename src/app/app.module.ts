@@ -6,6 +6,7 @@ import { MaterialsModule } from './materials/materials.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -34,17 +35,18 @@ import { BrandsCatgComponent } from './brands-catg/brands-catg.component';
 import { PremiumCatgComponent } from './premium-catg/premium-catg.component';
 import { SearchNavComponent } from './search-nav/search-nav.component';
 import { FooterComponent } from './footer/footer.component';
+import { MapsComponent } from './maps/maps.component';
 
 import { UserService } from './service/user/user.service';
 import { LoginAuthHomeComponent } from './login-auth-home/login-auth-home.component';
-
+import { MappingService } from './service/google-maps/mapping.service';
 
 
 @NgModule({
-  declarations: [AppComponent, routingComponents, HomeComponent, RegisterDialogComponent, UserComponent, UserListComponent, RegisterComponent, NavigationComponent, SlidertextComponent, WishlistComponent, HandbagComponent, MenCatgComponent, NewinCatComponent, SalesCatgComponent, WomenCatgComponent, BoysCatgComponent, GirlsCatgComponent, CollectionCatgComponent, ShoesCatgComponent, AccessoriesCatgComponent, InspireCatgComponent, SportsCatgComponent, BrandsCatgComponent, PremiumCatgComponent, LoginComponent, LoginDialogComponent, SearchNavComponent, FooterComponent, LoginAuthHomeComponent],
-  imports: [BrowserModule, AppRoutingModule, MaterialsModule, HttpClientModule, BrowserAnimationsModule, FormsModule, ReactiveFormsModule, HttpModule],
+  declarations: [AppComponent, routingComponents, HomeComponent, RegisterDialogComponent, UserComponent, UserListComponent, RegisterComponent, NavigationComponent, SlidertextComponent, WishlistComponent, HandbagComponent, MenCatgComponent, NewinCatComponent, SalesCatgComponent, WomenCatgComponent, BoysCatgComponent, GirlsCatgComponent, CollectionCatgComponent, ShoesCatgComponent, AccessoriesCatgComponent, InspireCatgComponent, SportsCatgComponent, BrandsCatgComponent, PremiumCatgComponent, LoginComponent, LoginDialogComponent, SearchNavComponent, FooterComponent, LoginAuthHomeComponent, MapsComponent],
+  imports: [BrowserModule, AgmCoreModule.forRoot({apiKey: 'AIzaSyA5xED-2pjebyv_OEDp8ZVZIza4jDCoUlw'}), AppRoutingModule, MaterialsModule, HttpClientModule, BrowserAnimationsModule, FormsModule, ReactiveFormsModule, HttpModule],
   exports: [FormsModule, ReactiveFormsModule],
-  providers: [UserService, UserListComponent],
+  providers: [UserService, UserListComponent, MappingService],
   entryComponents: [UserComponent, RegisterComponent, RegisterDialogComponent, LoginDialogComponent],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
