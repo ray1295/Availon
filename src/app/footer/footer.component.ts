@@ -10,6 +10,8 @@ import { MappingService } from '../service/google-maps/mapping.service';
 
 export class FooterComponent implements OnInit {
 
+  countryPath:string = "./assets/images/england_logo.png"
+  
   lat: string = '';
   lng: string = '';
   country: string = '';

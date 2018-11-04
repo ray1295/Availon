@@ -32,26 +32,14 @@
 // Top Navbar 
 .navbar-top {
   height: 48px !important;
+  padding: 0 120px !important;
   line-height: 48px;
   color: $color-dark;
   border-bottom: 1px solid $color-light-gray;
   text-transform: capitalize;
-  // Country location
-  &__country{
-    display: inline-flex;
-    flex: 1;
-    &--flag__wrapper {
-      height: 48px;
-      line-height: 55px;
-      margin-left: 10px;
-      img {
-        width: 18px;
-      }
-    }
-  }
   // Discount wrapper 
   &__discount-wrapper {
-    flex: 3;
+    flex: 5;
     display: inline-flex;
     align-items: center;
   }
@@ -75,7 +63,7 @@
     // Routing buttons
     button {
       border: none;
-      padding: 0 11px;
+      padding: 0 5px;
       height: 48px;
       min-width: auto;
       text-transform: capitalize;
@@ -95,8 +83,8 @@
   // Shopping category 
   &__category-bar {
     height: 100%;
-    width: 90%;
-    justify-content: space-evenly;
+    width: 100%;
+    justify-content: center;
     display: inline-flex;
     align-items: center;
     // Reset menu panel (dropdown menu)
@@ -111,15 +99,21 @@
   // Shopping caterogry section
   &__bar {
     border: none;
+    border-radius: 0;
     padding: 0;
+    margin: 0 10px;
     height: 48px;
     min-width: 40px;
     text-align: center;
     text-transform: uppercase;
     display: inline-block;
     // Menu panel category text hover effect 
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
     color: $color-gray;
+    border-bottom: 2px solid;
+    position: relative;
     }
     // Menu panel columns
     &__col {

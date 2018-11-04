@@ -16,6 +16,7 @@
         <p class="footer__sign-up__text">Subscribe to receive the latest fashion news, promotional and more!</p>
       </div>
 
+      <!-- [## INCOMPLETE ##] - Make form collect user emails and return a thank you modal if email valid and not repeated -->
       <!-- Sign Up Input -->
       <form>
         <mat-form-field appearance="fill">
@@ -26,6 +27,7 @@
       </form>
     </div>
 
+    <!-- [## INCOMPLETE ##] - Create social media links and send user to those linking pages -->
     <!-- Follow us Social Media Content -->
     <div class="footer__sign-up__follow">
 
@@ -35,45 +37,156 @@
       <!-- Social Media Account Follow -->
       <div>
         <!-- Twitter -->
-        <i class="fab fa-twitter"></i>
+        <a routerLink="">
+          <i class="fab fa-twitter"></i>
+        </a>
         <!-- Facebook -->
-        <i class="fab fa-facebook"></i>
+        <a routerLink="">
+          <i class="fab fa-facebook"></i>
+        </a>
         <!-- YouTube -->
-        <i class="fab fa-youtube"></i>
+        <a routerLink="">
+          <i class="fab fa-youtube"></i>
+        </a>
         <!-- Instagram -->
-        <i class="fab fa-instagram"></i>
+        <a routerLink="">
+          <i class="fab fa-instagram"></i>
+        </a>
         <!-- Snapchat -->
-        <i class="fab fa-snapchat-ghost"></i>
-        </div>
+        <a routerLink="">
+          <i class="fab fa-snapchat-ghost"></i>
+        </a>
+      </div>
     </div>
   </div>
 
+  <!-- [## INCOMPLETE ##] - Create page for each section, linking <a> tag to page -->
   <!-- Footer: Main Content -->
   <div class="footer__m-content">
 
     <!-- Products -->
     <ul>
-      <li></li>
-    </ul>
-
-    <!-- Cards & Discounts -->
-    <ul>
-      <li></li>
+      <li class="footer__m-content__header">products</li>
+      <li>
+        <a routerLink="">
+          shoes
+        </a>
+      </li>
+      <li>
+        <a routerLink="">
+          clothing
+        </a>
+      </li>
+      <li>
+        <a routerLink="">
+          accessories
+        </a>
+      </li>
+      <br>
+      <li>
+        <a routerLink="">
+          new arrivals
+        </a>
+      </li>
+      <li>
+        <a routerLink="">
+          outlet
+        </a>
+      </li>
     </ul>
 
     <!-- Company Info -->
     <ul>
-      <li></li>
+      <li class="footer__m-content__header">company info</li>
+      <li>
+        <a routerLink="">
+          news
+        </a>
+      </li>
+      <li>
+        <a routerLink="">
+          about us
+        </a>
+      </li>
+      <li>
+        <a routerLink="">
+          contact us
+        </a>
+      </li>
+      <li>
+        <a routerLink="">
+          blog
+        </a>
+      </li>
+      <li>
+        <a routerLink="">
+          careers & opportunities
+        </a>
+      </li>
+      <li>
+        <a routerLink="">
+          student discount
+        </a>
+      </li>
     </ul>
 
     <!-- Support -->
     <ul>
-      <li></li>
+      <li class="footer__m-content__header">support</li>
+      <li>
+        <a routerLink="">
+          help & cutomer service
+        </a>
+      </li>
+      <li>
+        <a routerLink="">
+          delivery
+        </a>
+      </li>
+      <li>
+        <a routerLink="">
+          return & refunds
+        </a>
+      </li>
+      <li>
+        <a routerLink="">
+          size charts
+        </a>
+      </li>
+      <li>
+        <a routerLink="">
+          security, privacy & cookies
+        </a>
+      </li>
+      <li>
+        <a routerLink="">
+          terms & conditions
+        </a>
+      </li>
     </ul>
 
     <!-- Delivery & Returns -->
     <ul>
-      <li></li>
+      <li class="footer__m-content__header">delivery & returns</li>
+      <li>
+        <a routerLink="">delivery & collection options
+        </a>
+      </li>
+      <li>
+        <a routerLink="">
+          delivery FAQs
+        </a>
+      </li>
+      <li>
+        <a routerLink="">
+          track my order
+        </a>
+      </li>
+      <li>
+        <a routerLink="">
+          returns & refunds
+        </a>
+      </li>
     </ul>
 
   </div>
@@ -81,32 +194,71 @@
   <!-- Footer: Bottom Content -->
   <div class="footer__b-content">
 
+    <hr />
+
     <ul class="footer__b-content__top">
       <ul class="footer__b-content__top-left">
         <li>
-          <!-- Nation lag & Title-->
+          <!-- Country recognition -->
+          <div class="footer__b-content__top-left__country">
+            <!-- International site recognition -->
+            <p>international site</p>
+            <!-- [## INCOMPLETE ##]: Recognise persons country/ language & dirct to page to change site language -->
+            <a routerLink="" class="footer__b-content__top-left__country--flag">
+              <img src="{{ countryPath }}" />
+            </a>
+          </div>
         </li>
         <li>
           <!-- Copyright -->
           © 2018 availon, inc. all rights reserved
         </li>
       </ul>
+
+      <!-- [## INCOMPLETE ##]: Each element linkings to appropriate page -->
       <ul class="footer__b-content__top-right">
         <!-- Terms & Conditions -->
-        <li> terms & conditions</li>
+        <li>
+          <a rotuerLink="">
+            terms & conditions
+          </a>
+        </li>
         <!-- Privacy & Cookie Policy -->
-        <li>privacy & cookie policy</li>
+        <li>
+          <a rotuerLink="">
+            privacy & cookie policy
+          </a>
+        </li>
         <!-- Cookies Settings -->
-        <li>cookies settings</li>
+        <li>
+          <a rotuerLink="">
+            cookies settings
+          </a>
+        </li>
         <!-- Privacy centre -->
-        <li>privacy centres</li>
+        <li>
+          <a rotuerLink="">
+            privacy centres
+          </a>
+        </li>
         <!-- Copyright Notice -->
-        <li>copyright notice</li>
+        <li>
+          <a rotuerLink="">
+            copyright notice
+          </a>
+        </li>
       </ul>
     </ul>
 
     <ul class="footer__b-content__btm">
       <!-- Payments -->
+      <i class="fab fa-cc-mastercard"></i>
+      <i class="fab fa-cc-visa"></i>
+      <i class="fab fa-cc-paypal"></i>
+      <i class="fab fa-cc-discover"></i>
+      <i class="fab fa-cc-amex"></i>
+      <i class="fab fa-cc-amazon-pay"></i>
+      <i class="fab fa-bitcoin"></i>
     </ul>
   </div>
 </footer>
