@@ -64,6 +64,7 @@
     button {
       border: none;
       padding: 0 5px;
+      margin: 0 5px;
       height: 48px;
       min-width: auto;
       text-transform: capitalize;
@@ -72,6 +73,24 @@
     i {
       vertical-align: middle;
       position: relative;
+    }
+  }
+  // Input 
+  &__search {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 5px;
+    &__input {
+      border: solid 1px $color-gray !important;
+      width: 70px !important;
+      height: 32px;
+      padding: 0 10px !important;
+      border-radius: 10em;
+      transition: all .5s;
+      &:focus,
+      &:hover {
+          width: 150px !important;
+      }
     }
   }
 }

@@ -1,18 +1,14 @@
-<!-- Search input button -->
-<button [matMenuTriggerFor]="menu">
-  <p>search...
-    <i class="material-icons">search</i>
-  </p>
-</button>
+<!-- <form class="navbar-top__input">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Search">
+    <i class="material-icons" matSuffix>
+      search
+    </i>
+  </mat-form-field>
+</form> -->
 
-<!-- [INCOMPLETE]: Make a search expansion panel -->
-<mat-menu #menu="matMenu" [overlapTrigger]="false">
-  <form class="navbar-top__input">
-    <mat-form-field class="example-full-width">
-      <input matInput placeholder="Search">
-      <i class="material-icons" matSuffix>
-        search
-      </i>
-    </mat-form-field>
-  </form>
-</mat-menu>
+
+<form class="navbar-top__search">
+  <input matInput class="navbar-top__search__input" type="search" placeholder="Search..." />
+  <mat-icon matSuffix>search</mat-icon>
+</form>
