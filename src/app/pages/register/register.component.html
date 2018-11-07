@@ -2,162 +2,159 @@
 
   <!-- Regitser heading -->
   <div class="register__heading">
-      <h1><b>Find deposit-free</b> homes near you</h1>
-      <h4>Tell us what you’re looking for and we'll contact our most suitable letting partner.</h4>
+    <h1></h1>
+    <h4></h4>
   </div>
   <!-- End of register heading -->
 
   <!-- Start of vertical stepper -->
   <mat-vertical-stepper [linear]="isLinear" #stepper>
-      <!-- First form -->
-      <mat-step [stepControl]="firstRegisterForm" class="stepper1">
-          <!-- Form for personal details -->
-          <form [formGroup]="firstRegisterForm" (ngSubmit)="onSubmitFirst()">
-              <!-- Form title -->
-              <ng-template matStepLabel>
-                  <h4><b>Your Personal Details</b></h4>
-                  <p>Create your personal account.</p>
-              </ng-template>
-              <!-- User name input -->
-              <table cellspacing="0">
-                  <tr>
-                      <td>
-                          <!-- First Name input -->
-                          <mat-form-field>
-                              <input matInput placeholder="First name" formControlName="firstName" required>
-                          </mat-form-field>
-                      </td>
-                      <td>
-                          <!-- Last Name input -->
-                          <mat-form-field>
-                              <input matInput placeholder="Last Name" formControlName="lastName" required>
-                          </mat-form-field>
-                      </td>
-                  </tr>
-              </table>
-              <!-- Email input -->
-              <mat-form-field>
-                  <input matInput placeholder="Email" formControlName="email" required>
-                  <mat-hint align="start">This will be used to identify you when signing in.</mat-hint>
+    <!-- First form -->
+    <mat-step [stepControl]="firstRegisterForm" class="stepper1">
+      <!-- Form for personal details -->
+      <form [formGroup]="firstRegisterForm" (ngSubmit)="onSubmitFirst()">
+        <!-- Form title -->
+        <ng-template matStepLabel>
+          <h4><b>Your Personal Details</b></h4>
+          <p>Create your personal account.</p>
+        </ng-template>
+        <!-- User name input -->
+        <table cellspacing="0">
+          <tr>
+            <td>
+              <!-- First Name input -->
+              <mat-form-field appearance="outline">
+                <input matInput placeholder="First name" formControlName="firstName" required>
               </mat-form-field>
-
-              <br>
-
-              <!-- Phone Number input -->
-              <mat-form-field>
-                  <input matInput placeholder="Phone Number" formControlName="phoneNumber" required>
-                  <mat-hint align="start">If you forget your password we can use this number to verify your identity.</mat-hint>
+            </td>
+            <td>
+              <!-- Last Name input -->
+              <mat-form-field appearance="outline">
+                <input matInput placeholder="Last Name" formControlName="lastName" required>
               </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <!-- Email input -->
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Email" formControlName="email" required>
+          <mat-hint align="start">This will be used to identify you when signing in.</mat-hint>
+        </mat-form-field>
 
-              <br>
+        <br>
 
-              <!-- Password input -->
-              <mat-form-field>
-                  <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password"
-                      required>
-                  <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
-                  <mat-hint>Your password must contain minimum 8 characters with at least one upper-case letter, one
-                      lower-case letter and one number.</mat-hint>
+        <!-- Phone Number input -->
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Phone Number" formControlName="phoneNumber" required>
+          <mat-hint align="start">If you forget your password we can use this number to verify your identity.</mat-hint>
+        </mat-form-field>
+
+        <br>
+
+        <!-- Password input -->
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password"
+            required>
+          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+          <mat-hint>Your password must contain minimum 8 characters with at least one upper-case letter, one
+            lower-case letter and one number.</mat-hint>
+        </mat-form-field>
+
+        <br>
+
+        <!-- Conirm Password input -->
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Confirm Password" [type]="hide ? 'password' : 'text'" required formControlName="confirmPassword">
+          <mat-hint></mat-hint>
+        </mat-form-field>
+
+        <!-- Action button : Button -> goes to next step -->
+        <button class="action-button" matStepperNext type="submit" [disabled]="!firstRegisterForm.valid">Continue</button>
+      </form>
+    </mat-step>
+    <!-- End of first form -->
+
+    <!-- Second form -->
+    <mat-step [stepControl]="secondRegisterForm">
+      <!-- Form for users dream home -->
+      <form [formGroup]="secondRegisterForm" (ngSubmit)="onSubmitSecond()" class="stepper2">
+        <ng-template matStepLabel>
+          <h4><b>Your Dream Home</b></h4>
+          <p>Please complete below to begin your search.</p>
+        </ng-template>
+
+        <!-- Location input -->
+        <table cellspacing="0">
+          <tr>
+            <td>
+              <!-- Max rent input -->
+              <mat-form-field appearance="outline">
+                <span matPrefix>£ &nbsp;</span>
+                <input matInput type="number" placeholder="Max. rent per month" formControlName="maxRent" required>
               </mat-form-field>
-
-              <br>
-
-              <!-- Conirm Password input -->
-              <mat-form-field>
-                  <input matInput placeholder="Confirm Password" [type]="hide ? 'password' : 'text'" required
-                      formControlName="confirmPassword">
-                  <mat-hint></mat-hint>
+            </td>
+            <td>
+              <!-- Min. number of bedrooms input -->
+              <mat-form-field appearance="outline">
+                <input matInput type="number" placeholder="Min. number of bedrooms" formControlName="minBedrooms"
+                  required>
               </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!-- Postal code -->
+              <mat-form-field appearance="outline">
+                <input matInput #postalCode maxlength="7" placeholder="Your Search Area" formControlName="searchArea"
+                  required>
+                <mat-hint>e.g. SE16</mat-hint>
+              </mat-form-field>
+            </td>
+            <td>
+              <!-- City input -->
+              <mat-form-field appearance="outline">
+                <mat-select placeholder="Your Search Radius" formControlName="searchRadius" name="radius" required>
+                  <mat-option *ngFor="let radius of radii" [value]="radius.value">
+                    {{radius.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
 
-              <!-- Action button : Button -> goes to next step -->
-              <button class="action-button" matStepperNext type="submit" [disabled]="!firstRegisterForm.valid">Continue</button>
-          </form>
-      </mat-step>
-      <!-- End of first form -->
+          </tr>
+        </table>
 
-      <!-- Second form -->
-      <mat-step [stepControl]="secondRegisterForm">
-          <!-- Form for users dream home -->
-          <form [formGroup]="secondRegisterForm" (ngSubmit)="onSubmitSecond()" class="stepper2">
-              <ng-template matStepLabel>
-                  <h4><b>Your Dream Home</b></h4>
-                  <p>Please complete below to begin your search.</p>
-              </ng-template>
+        <br>
 
-              <!-- Location input -->
-              <table cellspacing="0">
-                  <tr>
-                      <td>
-                          <!-- Max rent input -->
-                          <mat-form-field>
-                              <span matPrefix>£ &nbsp;</span>
-                              <input matInput type="number" placeholder="Max. rent per month" formControlName="maxRent"
-                                  required>
-                          </mat-form-field>
-                      </td>
-                      <td>
-                          <!-- Min. number of bedrooms input -->
-                          <mat-form-field>
-                              <input matInput type="number" placeholder="Min. number of bedrooms" formControlName="minBedrooms"
-                                  required>
-                          </mat-form-field>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          <!-- Postal code -->
-                          <mat-form-field>
-                              <input matInput #postalCode maxlength="7" placeholder="Your Search Area"
-                                  formControlName="searchArea" required>
-                              <mat-hint>e.g. SE16</mat-hint>
-                          </mat-form-field>
-                      </td>
-                      <td>
-                          <!-- City input -->
-                          <mat-form-field>
-                              <mat-select placeholder="Your Search Radius" formControlName="searchRadius" name="radius"
-                                  required>
-                                  <mat-option *ngFor="let radius of radii" [value]="radius.value">
-                                      {{radius.viewValue}}
-                                  </mat-option>
-                              </mat-select>
-                          </mat-form-field>
-                      </td>
+        <!-- Privacy checkbox -->
+        <mat-checkbox color="primary" formControlName="terms">
+          I accept the
+          <a href="https://www.flatfair.co.uk/portal_terms/" target="blank"><strong>Terms</strong></a>
+          and
+          <a href="https://www.flatfair.co.uk/privacy/" target="blank"><strong>Privacy Policy</strong></a>
+          .
+        </mat-checkbox>
+        <!-- Marketing checkbox -->
+        <mat-checkbox color="primary" formControlName="marketing">
+          I would like to receive marketing email communications
+          (including newsletters, occasional surveys and partner content).
+        </mat-checkbox>
+        <!-- Submit form button -->
+        <button class="action-button" type="submit" matStepperNext [disabled]="!secondRegisterForm.valid">Register
+          &
+          Create Account
+        </button>
+      </form>
+    </mat-step>
+    <!-- End of second form -->
 
-                  </tr>
-              </table>
-
-              <br>
-
-              <!-- Privacy checkbox -->
-              <mat-checkbox color="primary" formControlName="terms">
-                  I accept the
-                  <a href="https://www.flatfair.co.uk/portal_terms/" target="blank"><strong>Terms</strong></a>
-                  and
-                  <a href="https://www.flatfair.co.uk/privacy/" target="blank"><strong>Privacy Policy</strong></a>
-                  .
-              </mat-checkbox>
-              <!-- Marketing checkbox -->
-              <mat-checkbox color="primary" formControlName="marketing">
-                  I would like to receive marketing email communications
-                  (including newsletters, occasional surveys and partner content).
-              </mat-checkbox>
-              <!-- Submit form button -->
-              <button class="action-button" type="submit" matStepperNext [disabled]="!secondRegisterForm.valid">Register
-                  &
-                  Create Account
-              </button>
-          </form>
-      </mat-step>
-      <!-- End of second form -->
-
-      <!-- Third stepper -->
-      <mat-step>
-          <ng-template matStepLabel>
-              <h4><b>Your Account</b></h4>
-          </ng-template>
-          <p> Thank you for registering. We'll be in touch soon!</p>
-      </mat-step>
+    <!-- Third stepper -->
+    <mat-step>
+      <ng-template matStepLabel>
+        <h4><b>Your Account</b></h4>
+      </ng-template>
+      <p> Thank you for registering. We'll be in touch soon!</p>
+    </mat-step>
   </mat-vertical-stepper>
   <!-- End of stepper -->
 </div>
