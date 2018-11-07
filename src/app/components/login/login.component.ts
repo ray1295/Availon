@@ -1,6 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { LoginDialogComponent } from "../modals/login-dialog/login-dialog.component";
+import { LoginDialogComponent } from "../../modals/login-dialog/login-dialog.component";
 
 // INTERFACE:
 // ----------

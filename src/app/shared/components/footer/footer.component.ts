@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
-import { MappingService } from '../service/google-maps/mapping.service';
+import { MappingService } from '../../../service/google-maps/mapping.service';
 
 @Component({
  selector: 'app-footer',
