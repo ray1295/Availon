@@ -3,26 +3,18 @@
 
 // Modules and Variables
 @import "stylesheets/modules/colors";
-@import "stylesheets/modules/all";
 @import "stylesheets/modules/utility";
 
 // Partials
 @import "stylesheets/partials/reset";
 @import "stylesheets/partials/typography";
-@import "stylesheets/partials/figures";
-@import "stylesheets/partials/grids";
 @import "stylesheets/partials/forms";
-@import "stylesheets/partials/base";
 @import "stylesheets/partials/buttons";
-
-// Third-party
-@import "stylesheets/vendor/colorpicker";
-@import "stylesheets/vendor/jquery.ui.core";
 
 // Components SCSS
 @import "app/shared/components/navigation/navigation.component.scss";
-@import "app/slidertext/slidertext.component.scss";
-@import "app/search-nav/search-nav.component.scss";
+@import "app/components/slidertext/slidertext.component.scss";
+@import "app/components/search-nav/search-nav.component.scss";
 @import "app/shared/components/footer/footer.component.scss";
 // Modals
 @import "app/modals/login-dialog/login-dialog.component.scss";
