@@ -11,7 +11,7 @@ import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { RegisterDialogComponent } from './modals/register-dialog/register-dialog.component';
-import { RegisterComponent } from "./components/register/register.component";
+import { RegisterComponent } from "./pages/register/register.component";
 import { LoginComponent } from './components/login/login.component';
 import { LoginDialogComponent } from './modals/login-dialog/login-dialog.component';
 import { UserComponent } from './user/user.component';

@@ -11,11 +11,15 @@
 @import "stylesheets/partials/forms";
 @import "stylesheets/partials/buttons";
 
+// Pages 
+@import "app/pages/register/register.component.scss";
+
 // Components SCSS
 @import "app/shared/components/navigation/navigation.component.scss";
 @import "app/components/slidertext/slidertext.component.scss";
 @import "app/components/search-nav/search-nav.component.scss";
 @import "app/shared/components/footer/footer.component.scss";
+
 // Modals
 @import "app/modals/login-dialog/login-dialog.component.scss";
 

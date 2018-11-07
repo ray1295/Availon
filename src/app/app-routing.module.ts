@@ -6,6 +6,7 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { HomeComponent } from './pages/home/home.component';
 import { WishlistComponent } from "./pages/wishlist/wishlist.component";
 import { LoginAuthHomeComponent } from './pages/login-auth-home/login-auth-home.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'help', component: HelpComponent },
   { path: 'checkout', component: CheckoutComponent },
   { path: 'wishlist', component: WishlistComponent },
+  { path: 'register', component: RegisterComponent },
 ];
 
 @NgModule({
