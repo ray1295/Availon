@@ -1,3 +1,20 @@
-<p>
-    Checout works
-</p>
+<div style="display: inline-grid;">
+    <!-- String interpolation -> Invoking a method -->
+    <p>{{ getCheckout() }}</p>
+    
+    <!-- Property Binding -->
+    <button mat-raised-button [disabled]="!allowAdditem" (click)="onAddItem()">Add item</button>
+    
+    <!-- Event Binding 1 -->
+    <p>{{ itemAddStatus }}</p>
+    
+    <!-- Event Binding 2 -->
+    <label>Checkout Items</label>
+    <!-- $event -> outputs value of field -->
+    <!-- <input type="text" (input)="onUpdateItemList($event)"/> -->
+    <!-- Using $ event to fetch event data -->
+    <p>{{ itemName }}</p>
+
+    <!-- Two-way Data Binding -> Reacting and Fecthing user events in -->
+    <input type="text" [(ngModel)]="itemName"/>
+<div>
