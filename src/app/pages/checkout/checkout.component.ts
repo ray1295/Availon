@@ -1,18 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
   styleUrls: ['./checkout.component.scss']
 })
-export class CheckoutComponent implements OnInit {
 
+export class CheckoutComponent {
+
+  username: string = "";
+  userLive: boolean = false;
   allowAdditem = false;
   itemAddStatus = "No item was added";
-  checkout:string = "Checkout out now!";
-  itemName:string = "Shirt XL";
+  checkout: string = "Checkout out now!";
+  itemName: string = "Shirt XL";
 
-  // Method -> Returning a string
+  // Method -> Returning a string.
   getCheckout() {
     return this.checkout;
   }
@@ -28,14 +31,21 @@ export class CheckoutComponent implements OnInit {
     this.itemName = (<HTMLInputElement>event.target).value;
   }
 
+  //Method -> Enable button when username not empty.
+  onUsernameLive() {
+    if (this.username !== "")
+      return this.userLive = true;
+  }
+
+  // Method -> Reset username to empty string.
+  userReset() {
+    return this.username = "";
+  }
+
   constructor() {
     // Method -> Running function after given time. 
     setTimeout(() => {
       this.allowAdditem = true;
     }, 2000)
   }
-
-  ngOnInit() {
-  }
-
 }

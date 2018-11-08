@@ -1,3 +1,10 @@
-<p>
-  wishlist works
-</p>
+<input type="text" [(ngModel)]="itemWish" />
+<p>{{ itemWish }}</p>
+
+<!-- *ngIf -> Changing the DOM if expression passes true-->
+<p *ngIf="onAddWish(); else noWish">Wishlist has items.</p>
+
+<!-- Else statement -> Local reference [#] -->
+<ng-template #noWish>
+  <p>Wishlist is empty</p>
+</ng-template>

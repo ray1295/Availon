@@ -1,20 +1,39 @@
 <div style="display: inline-grid;">
+
     <!-- String interpolation -> Invoking a method -->
-    <p>{{ getCheckout() }}</p>
-    
+    <h3>{{ getCheckout() }}</h3>
+    <hr />
+
     <!-- Property Binding -->
     <button mat-raised-button [disabled]="!allowAdditem" (click)="onAddItem()">Add item</button>
-    
+
     <!-- Event Binding 1 -->
     <p>{{ itemAddStatus }}</p>
-    
+
+    <br />
+
     <!-- Event Binding 2 -->
-    <label>Checkout Items</label>
+    <h4>Checkout Items</h4>
     <!-- $event -> outputs value of field -->
-    <!-- <input type="text" (input)="onUpdateItemList($event)"/> -->
+    <input appearance="outline" type="text" (input)="onUpdateItemList($event)" />
     <!-- Using $ event to fetch event data -->
     <p>{{ itemName }}</p>
+    <br />
 
-    <!-- Two-way Data Binding -> Reacting and Fecthing user events in -->
-    <input type="text" [(ngModel)]="itemName"/>
+    <!-- 2-way Data Binding -> Reacting and Fecthing user events in -->
+    <input appearance="outline" type="text" [(ngModel)]="itemName" />
+    <p *ngIf="">{{ itemName }}</p>
+</div>
+
+<hr />
+
 <div>
+    <br />
+    <!-- Input field which updates a property ('username') via Two-Way-Binding -->
+    <input appearance="outline" type="text" [(ngModel)]="username" />
+    <!-- Output the username property via String Interpolation -->
+    <p>{{ username }}</p>
+    <!-- Button which may only be clicked if the username is NOT an empty string -->
+    <!-- Clicking the button, the username should be reset to an empty string  -->
+    <button mat-raised-button (click)="userReset()" [disabled]="!onUsernameLive()">User</button>
+</div>

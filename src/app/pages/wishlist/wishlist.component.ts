@@ -6,9 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wishlist.component.scss']
 })
 export class WishlistComponent implements OnInit {
-  panelOpenState = false;
   
-  constructor() { }
+  itemWish:string = '';
+  addWish:boolean = false;
+
+  // Built in method -> called once component is created
+  constructor() { 
+    this.itemWish = Math.random() > 0.5 ? 'online' : 'offline'
+  }
+
+  onAddWish() {
+    if (this.itemWish !== '')
+      return true;
+  }
 
   ngOnInit() {
   }
