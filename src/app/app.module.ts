@@ -12,12 +12,12 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { RegisterComponent } from "./pages/register/register.component";
 import { LoginComponent } from './components/login/login.component';
-import { LoginDialogComponent } from './modals/login-dialog/login-dialog.component';
-import { UserComponent } from './user/user.component';
-import { UserListComponent } from './user-list/user-list.component';
+import { LoginDialogComponent } from './shared/modals/login-dialog/login-dialog.component';
+import { UserComponent } from './pages/user/user.component';
+import { UserListComponent } from './pages/admin/components/user-list/user-list.component';
 import { NavigationComponent } from "./shared/components/navigation/navigation.component";
 import { SlidertextComponent } from "./components/slidertext/slidertext.component";
-import { WishlistComponent } from './pages/wishlist/wishlist.component';
+import { WishlistComponent } from './pages/account/pages/wishlist/wishlist.component';
 import { HandbagComponent } from './components/handbag/handbag.component';
 import { MenCatgComponent } from './shared/components/navigation/categories/men-catg/men-catg.component';
 import { NewinCatComponent } from './shared/components/navigation/categories/newin-cat/newin-cat.component';
@@ -31,13 +31,16 @@ import { SportsCatgComponent } from './shared/components/navigation/categories/s
 import { SearchNavComponent } from './components/search-nav/search-nav.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { LoginAuthHomeComponent } from './pages/login-auth-home/login-auth-home.component';
+import { AccountComponent } from './pages/account/account.component';
+import { SettingsComponent } from './pages/account/pages/settings/settings.component';
+import { OrderComponent } from './pages/account/pages/order/order.component';
 
-import { UserService } from './service/user/user.service';
-import { MappingService } from './service/google-maps/mapping.service';
+import { UserService } from './shared/services/user/user.service';
+import { MappingService } from './shared/services/google-maps/mapping.service';
 
 
 @NgModule({
-  declarations: [AppComponent, routingComponents, HomeComponent, UserComponent, UserListComponent, RegisterComponent, NavigationComponent, SlidertextComponent, WishlistComponent, HandbagComponent, MenCatgComponent, NewinCatComponent, SalesCatgComponent, WomenCatgComponent, BoysCatgComponent, GirlsCatgComponent, ShoesCatgComponent, AccessoriesCatgComponent, SportsCatgComponent, LoginComponent, LoginDialogComponent, SearchNavComponent, FooterComponent, LoginAuthHomeComponent],
+  declarations: [AppComponent, routingComponents, HomeComponent, UserComponent, UserListComponent, RegisterComponent, NavigationComponent, SlidertextComponent, WishlistComponent, HandbagComponent, MenCatgComponent, NewinCatComponent, SalesCatgComponent, WomenCatgComponent, BoysCatgComponent, GirlsCatgComponent, ShoesCatgComponent, AccessoriesCatgComponent, SportsCatgComponent, LoginComponent, LoginDialogComponent, SearchNavComponent, FooterComponent, LoginAuthHomeComponent, AccountComponent, SettingsComponent, OrderComponent],
   imports: [BrowserModule, AgmCoreModule.forRoot({apiKey: 'AIzaSyA5xED-2pjebyv_OEDp8ZVZIza4jDCoUlw'}), AppRoutingModule, MaterialsModule, HttpClientModule, BrowserAnimationsModule, FormsModule, ReactiveFormsModule, HttpModule],
   exports: [FormsModule, ReactiveFormsModule],
   providers: [UserService, UserListComponent, MappingService],

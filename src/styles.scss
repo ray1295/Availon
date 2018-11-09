@@ -1,15 +1,13 @@
 /* Primary file */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-// Modules and Variables
-@import "stylesheets/modules/colors";
-@import "stylesheets/modules/utility";
-
 // Partials
+@import "stylesheets/partials/colors";
 @import "stylesheets/partials/reset";
 @import "stylesheets/partials/typography";
 @import "stylesheets/partials/forms";
 @import "stylesheets/partials/buttons";
+@import "stylesheets/partials/utility";
 
 // Pages 
 @import "app/pages/register/register.component.scss";
@@ -21,7 +19,7 @@
 @import "app/shared/components/footer/footer.component.scss";
 
 // Modals
-@import "app/modals/login-dialog/login-dialog.component.scss";
+@import "app/shared/modals/login-dialog/login-dialog.component.scss";
 
 // Styles
 html, body {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
-import { UserService } from '../service/user/user.service';
-import { UserComponent } from '../user/user.component';
+import { UserService } from '../../../../shared/services/user/user.service';
+import { UserComponent } from '../../../user/user.component';
 
 @Component({
   selector: 'app-user-list',
