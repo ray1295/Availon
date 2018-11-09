@@ -14,7 +14,8 @@ footer {
         background: $color-light-gray;
         display: inline-flex;
         align-items: center;
-        justify-content: space-around;  
+        justify-content: space-between;
+        padding: 0 5%; 
         &__column-1 {
             display: inline-flex;
             align-items: center;
@@ -67,12 +68,12 @@ footer {
     }
     .footer__m-content {
         width: 100%;
-        padding: 50px 120px 0;
+        padding: 3% 5% 0;
         display: inline-flex;
         justify-content: start;
         ul{
-            min-width: 200px;
-            padding-right: 50px;
+            min-width: 20%;
+            padding-right: 5%;
             li {
                 text-transform: capitalize;
                 padding-bottom: 7px;
@@ -86,9 +87,11 @@ footer {
         }
     }
     .footer__b-content {
-    margin-top: 20px;
-    padding: 12px 120px 0;
+    padding: 0 5%;
     text-transform: capitalize;
+    hr {
+        margin: 3% 0;
+    }
         &__top{
             display: inline-flex;
             width: 100%;

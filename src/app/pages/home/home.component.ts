@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Observer, Subscription, interval } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
@@ -8,18 +6,23 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  numbersObsSubscription: Subscription;
+
+  display:boolean = true;
+  clicks = [];
+  count:number = 0;
+
+  onButtonClicked() {
+    // Toggle function
+    this.display = !this.display;
+    this.count++;
+    // Log all button clicks in an array
+    this.clicks.push(this.count);
+  }
 
   constructor() { }
 
   ngOnInit() {
-    // const myNum = Observable.interval(1000);
-    // myNum.subcribe(
-    //   (number: number) => 
-    //   {
-    //     console.log(number)
-    //   }
-    // );
+
   }
 
 }
