@@ -4,7 +4,17 @@
 <!-- *ngIf -> Changing the DOM if expression passes true-->
 <p *ngIf="onAddWish(); else noWish">Wishlist has items.</p>
 
-<!-- Else statement -> Local reference [#] -->
+<!-- *ngIf else statement -> Local reference [#] -->
 <ng-template #noWish>
   <p>Wishlist is empty</p>
 </ng-template>
+
+<br/>
+
+<!-- ngStyle -> Outputting wishlist status -->
+<!-- ngClass -> Changing class -->
+<h4 
+  [ngStyle]="{backgroundColor: getColor()}"
+  [ngClass]="{item: wishStatus === 'item'}">
+    {{ wishStatus }}
+</h4>
