@@ -1,0 +1,65 @@
+.register {
+    margin: 2vw 10vw;
+    &__heading {
+        padding: 20px 0;
+        h1 {
+            margin-bottom: 10px;
+        }
+    }
+    .mat-stepper-vertical{
+        width: 600px;
+    }
+    .mat-form-field {
+        display: block;
+    }
+    table {
+        width: 100%;
+    }
+    .mat-step-header,
+    .mat-stepper-vertical,
+    .mat-step-header:hover {
+        background-color: transparent; 
+    }
+    .mat-vertical-content {
+        padding: 0 24px;
+    }
+    .mat-step-icon {
+        background-color: $color-dark;
+        height: 34px;
+        width: 34px;
+        left: -5px;
+        margin-right: 5px !important;
+        font-weight: bold;
+    }
+    .action-button {
+        background: $color-light-gray;
+        color: $color-white;
+        border: none;
+        font-weight: bold !important;
+        margin-top: 10px;
+        padding: 0 8px;
+    }
+    .stepper1 {
+
+    } 
+    .stepper2 {
+        &__action-buttons {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+        .destructive {
+            background-color: $color-destructive !important;
+        }
+        .mat-checkbox-layout{
+            white-space: pre-line;
+        }
+        .mat-checkbox-inner-container {
+            margin: 0 10px 0 auto; 
+            top: 5px;
+        }
+    }
+}
