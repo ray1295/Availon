@@ -38,14 +38,14 @@
 
         <!-- Autocomplete -> Delivery address -->
         <mat-form-field appearance="outline">
-          <input type="text" placeholder="Address" aria-label="Number" matInput [formControl]="myControl"
-            [matAutocomplete]="auto">
-          <mat-autocomplete #auto="matAutocomplete">
-            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-              {{option}}
-            </mat-option>
-          </mat-autocomplete>
+          <input appGooglePlaces matInput type="text" (onSelect)="setAddress($event)" placeholder="Type to search..." />
         </mat-form-field>
+        <!-- Displaying the contents of the address object received from our event emitter -->
+        <ul style="list-style-type: none;">
+          <li *ngFor="let key of addrKeys">
+            <span>{{key}}</span>: <span>{{addr[key]}}</span>
+          </li>
+        </ul>
 
         <!-- [#INCOMPLETE#] -> Return to server user gender -->
         <!-- Radio Button -> Select gender -->

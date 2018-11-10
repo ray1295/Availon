@@ -42,10 +42,12 @@ import { PaymentsComponent } from './pages/payments/payments.component';
 import { CustomersComponent } from './pages/customers/customers.component';
 import { CartsComponent } from './pages/carts/carts.component';
 
+import { GooglePlacesDirective } from './shared/directives/google-places/google-places.directive';
+
 
 @NgModule({
-  declarations: [AppComponent, routingComponents, HomeComponent, UserComponent, UserListComponent, RegisterComponent, NavigationComponent, SlidertextComponent, WishlistComponent, HandbagComponent, MenCatgComponent, NewinCatComponent, SalesCatgComponent, WomenCatgComponent, BoysCatgComponent, GirlsCatgComponent, ShoesCatgComponent, AccessoriesCatgComponent, SportsCatgComponent, LoginComponent, LoginDialogComponent, SearchNavComponent, FooterComponent, LoginAuthHomeComponent, AccountComponent, SettingsComponent, OrdersComponent, ProductsComponent, PaymentsComponent, CustomersComponent, CartsComponent],
-  imports: [BrowserModule, AgmCoreModule.forRoot({apiKey: 'AIzaSyA5xED-2pjebyv_OEDp8ZVZIza4jDCoUlw'}), AppRoutingModule, MaterialsModule, HttpClientModule, BrowserAnimationsModule, FormsModule, ReactiveFormsModule, HttpModule],
+  declarations: [AppComponent, routingComponents, HomeComponent, UserComponent, UserListComponent, RegisterComponent, NavigationComponent, SlidertextComponent, WishlistComponent, HandbagComponent, MenCatgComponent, NewinCatComponent, SalesCatgComponent, WomenCatgComponent, BoysCatgComponent, GirlsCatgComponent, ShoesCatgComponent, AccessoriesCatgComponent, SportsCatgComponent, LoginComponent, LoginDialogComponent, SearchNavComponent, FooterComponent, LoginAuthHomeComponent, AccountComponent, SettingsComponent, OrdersComponent, ProductsComponent, PaymentsComponent, CustomersComponent, CartsComponent, GooglePlacesDirective],
+  imports: [BrowserModule, AgmCoreModule.forRoot({apiKey: 'AIzaSyA5xED-2pjebyv_OEDp8ZVZIza4jDCoUlw',  libraries: ["places"]}), AppRoutingModule, MaterialsModule, HttpClientModule, BrowserAnimationsModule, FormsModule, ReactiveFormsModule, HttpModule],
   exports: [FormsModule, ReactiveFormsModule],
   providers: [UserService, UserListComponent, MappingService],
   entryComponents: [UserComponent, RegisterComponent, LoginDialogComponent],

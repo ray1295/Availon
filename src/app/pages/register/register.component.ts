@@ -1,9 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { PasswordValidator } from '../../shared/validators/confirm-password.validator';
-import { Observable } from 'rxjs';
-import { map, startWith } from 'rxjs/operators';
-import { MappingService } from '../../shared/services/google-maps/mapping.service';
 
 @Component({
   selector: 'app-register',
@@ -15,11 +12,11 @@ export class RegisterComponent implements OnInit {
   checked = false;
   registerForm: FormGroup;
   genders: string[] = ['Female', 'Male'];
-  filteredOptions: Observable<string[]>;
-  myControl = new FormControl();
-  options: string[] = ['One', 'Two', 'Three'];
-  
-  constructor(private _formBuilder: FormBuilder) {
+  public title = 'Places';
+  public addrKeys: string[];
+  public addr: object;
+
+  constructor(public _formBuilder: FormBuilder, private zone: NgZone) {
     this.registerForm = new FormGroup({
       firstName: new FormControl('', Validators.compose([Validators.required, Validators.minLength(3)])),
       lastName: new FormControl('', Validators.compose([Validators.required, Validators.minLength(3)])),
@@ -33,22 +30,20 @@ export class RegisterComponent implements OnInit {
     );
   }
 
+  // Method -> to be invoked everytime we receive a new instance of the address object from the onSelect event emitter.
+  setAddress(addrObj) {
+    //We are wrapping this in a NgZone to reflect the changes
+    //to the object in the DOM.
+    this.zone.run(() => {
+      this.addr = addrObj;
+      this.addrKeys = Object.keys(addrObj);
+    });
+  }
+
   onSubmit() {
     // console.log(this.registerForm.value);
   }
 
-  
-  ngOnInit() { 
-    this.filteredOptions = this.myControl.valueChanges
-    .pipe(
-      startWith(''),
-      map(value => this._filter(value))
-    );
-  }
 
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-
-    return this.options.filter(option => option.toLowerCase().includes(filterValue));
-  }
+  ngOnInit() { }
 }
