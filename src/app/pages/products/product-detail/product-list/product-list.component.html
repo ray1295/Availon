@@ -1,0 +1,17 @@
+<div class="product-list">
+  <button>New Product</button>
+</div>
+<hr>
+<div>
+  <!-- Receipe item == Product item  -->
+  <a href="#" *ngFor="let product of products">
+    <div>
+      <h4>{{ product.name }}</h4>
+      <p>{{ product.description }}</p>
+    </div>
+    <span>
+      <img [src]="product.imagePath" alt="{{ product.name }}" style="max-height: 50px;"/>
+    </span>
+  </a>
+  <app-product-item></app-product-item>
+</div>

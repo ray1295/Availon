@@ -4,9 +4,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { HelpComponent } from './pages/help/help.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { HomeComponent } from './pages/home/home.component';
-import { WishlistComponent } from "./pages/account/pages/wishlist/wishlist.component";
 import { LoginAuthHomeComponent } from './pages/login-auth-home/login-auth-home.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { WishlistComponent } from "./pages/account/pages/wishlist/wishlist.component";
+import { AdminComponent } from './pages/admin/admin.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'checkout', component: CheckoutComponent },
   { path: 'wishlist', component: WishlistComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'admin', component: AdminComponent },
 ];
 
 @NgModule({

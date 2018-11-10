@@ -1,0 +1,12 @@
+<div class="shopping-list">
+  <!-- Shopping Edit -> Add new products or exisiting ones -->
+  <div class="shopping-list__edit">
+    <app-shopping-edit></app-shopping-edit>
+    <hr>
+    <ul>
+      <a *ngFor="let item of items">
+        {{ item.name }} ({{ item.amount }})
+      </a>
+    </ul>
+  </div>
+</div>

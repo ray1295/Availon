@@ -1,0 +1,9 @@
+.products {
+    display: flex;
+    &__lists {
+        flex: 1;
+    }
+    &__details {
+        flex: 1;
+    }
+}
