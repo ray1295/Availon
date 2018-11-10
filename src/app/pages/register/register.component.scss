@@ -1,13 +1,8 @@
 .register {
-    margin: 2vw 10vw;
+    padding: 0 30%;
     &__heading {
-        padding: 20px 0;
-        h1 {
-            margin-bottom: 10px;
-        }
-    }
-    .mat-stepper-vertical{
-        width: 600px;
+        padding: 0 0 2% 0;
+        text-transform: capitalize;
     }
     .mat-form-field {
         display: block;
@@ -15,51 +10,39 @@
     table {
         width: 100%;
     }
-    .mat-step-header,
-    .mat-stepper-vertical,
-    .mat-step-header:hover {
-        background-color: transparent; 
-    }
-    .mat-vertical-content {
-        padding: 0 24px;
-    }
-    .mat-step-icon {
-        background-color: $color-dark;
-        height: 34px;
-        width: 34px;
-        left: -5px;
-        margin-right: 5px !important;
-        font-weight: bold;
-    }
     .action-button {
-        background: $color-light-gray;
-        color: $color-white;
+        background: #ff9c00;
+        color: #ffffff;
         border: none;
-        font-weight: bold !important;
-        margin-top: 10px;
-        padding: 0 8px;
+        text-transform: uppercase;
+        margin: 5% 0;
+        height: 48px;
+        font-size: 1rem !important;
+        width: 100%;
+        text-align: center;
     }
-    .stepper1 {
-
-    } 
-    .stepper2 {
-        &__action-buttons {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: justify;
-                -ms-flex-pack: justify;
-                    justify-content: space-between;
+    .password-hint {
+        margin-bottom: 1.25em;
+    }
+    &__radio-button {
+        display: block;
+    margin-bottom: 1.25em;
+        mat-label {
+            display: block;
         }
-        .destructive {
-            background-color: $color-destructive !important;
+        mat-radio-button {
+            display: inline-block;
+            padding-right: 10px;
+            margin: 2% 0;
         }
-        .mat-checkbox-layout{
-            white-space: pre-line;
+        mat-hint {
+            display: block;
         }
-        .mat-checkbox-inner-container {
-            margin: 0 10px 0 auto; 
-            top: 5px;
+    }
+    &__checkbox {
+        .mat-checkbox-layout {
+            white-space: normal;
+            margin-top: 2%;
         }
     }
 }

@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { PasswordValidator } from '../../shared/validators/confirm-password.validator';
-
-export interface Radius {
-  value: string;
-  viewValue: string;
-}
+import { Observable } from 'rxjs';
+import { map, startWith } from 'rxjs/operators';
+import { MappingService } from '../../shared/services/google-maps/mapping.service';
 
 @Component({
   selector: 'app-register',
@@ -13,51 +11,44 @@ export interface Radius {
   // styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  isLinear = true;
   hide = true;
   checked = false;
-  firstRegisterForm: FormGroup;
-  secondRegisterForm: FormGroup;
-
-  radii: Radius[] = [
-    { value: '1/4-0', viewValue: '1/4 miles' },
-    { value: '1/2-1', viewValue: '1/2 miles' },
-    { value: '1-2', viewValue: '1 miles' },
-    { value: '3-3', viewValue: '3 miles' },
-    { value: '5-4', viewValue: '5 miles' },
-    { value: '10-5', viewValue: '10 miles' },
-    { value: '20-6', viewValue: '20 miles' }
-  ];
-
+  registerForm: FormGroup;
+  genders: string[] = ['Female', 'Male'];
+  filteredOptions: Observable<string[]>;
+  myControl = new FormControl();
+  options: string[] = ['One', 'Two', 'Three'];
+  
   constructor(private _formBuilder: FormBuilder) {
-    this.firstRegisterForm = new FormGroup({
+    this.registerForm = new FormGroup({
       firstName: new FormControl('', Validators.compose([Validators.required, Validators.minLength(3)])),
       lastName: new FormControl('', Validators.compose([Validators.required, Validators.minLength(3)])),
       email: new FormControl('', Validators.compose([Validators.required, Validators.email])),
-      phoneNumber: new FormControl('', Validators.compose([Validators.required, Validators.maxLength(11)])),
       password: new FormControl('', Validators.compose([Validators.required, Validators.minLength(8), Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$')])),
-      confirmPassword: new FormControl('', Validators.required)
+      confirmPassword: new FormControl('', Validators.required),
+      marketing: new FormControl('')
     }, (group: FormGroup) => {
-        return PasswordValidator.checkPasswords(group)
+      return PasswordValidator.checkPasswords(group)
     }
     );
-    this.secondRegisterForm = new FormGroup({
-      maxRent: new FormControl('', [Validators.required]),
-      minBedrooms: new FormControl('', Validators.compose([Validators.required, Validators.minLength(1)])),
-      searchRadius: new FormControl('', [Validators.required]),
-      searchArea: new FormControl('', [Validators.required]),
-      terms: new FormControl ('', [Validators.required]),
-      marketing: new FormControl ('')
-    });
-  }  
-
-  onSubmitFirst() {
-    // console.log(this.firstRegisterForm.value);
-  }
-  onSubmitSecond() {
-    // console.log(this.secondRegisterForm.value);
   }
 
-  ngOnInit() {}
+  onSubmit() {
+    // console.log(this.registerForm.value);
+  }
 
+  
+  ngOnInit() { 
+    this.filteredOptions = this.myControl.valueChanges
+    .pipe(
+      startWith(''),
+      map(value => this._filter(value))
+    );
+  }
+
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+
+    return this.options.filter(option => option.toLowerCase().includes(filterValue));
+  }
 }

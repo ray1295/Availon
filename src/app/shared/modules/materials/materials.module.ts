@@ -13,11 +13,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatStepperModule } from '@angular/material/stepper';
-
+import { MatRadioModule } from '@angular/material/radio';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatTableModule } from '@angular/material/table';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
-  imports: [CommonModule, MatMenuModule, MatSelectModule, MatStepperModule, MatToolbarModule, MatIconModule, MatInputModule, MatCheckboxModule, MatFormFieldModule, RouterModule, MatDialogModule, MatCardModule, MatExpansionModule, MatButtonModule],
+  imports: [CommonModule, MatAutocompleteModule, MatTableModule, MatDatepickerModule, MatRadioModule, MatMenuModule, MatSelectModule, MatStepperModule, MatToolbarModule, MatIconModule, MatInputModule, MatCheckboxModule, MatFormFieldModule, RouterModule, MatDialogModule, MatCardModule, MatExpansionModule, MatButtonModule],
   declarations: [ ],
-  exports: [ MatMenuModule, MatToolbarModule, MatIconModule, MatSelectModule, MatStepperModule, MatInputModule, MatFormFieldModule, MatDialogModule, MatCheckboxModule, MatCardModule, MatExpansionModule, MatButtonModule, RouterModule ]
+  exports: [ MatMenuModule, MatAutocompleteModule, MatTableModule, MatDatepickerModule, MatRadioModule, MatToolbarModule, MatIconModule, MatSelectModule, MatStepperModule, MatInputModule, MatFormFieldModule, MatDialogModule, MatCheckboxModule, MatCardModule, MatExpansionModule, MatButtonModule, RouterModule ]
 })
 export class MaterialsModule { }

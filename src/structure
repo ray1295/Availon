@@ -1,0 +1,94 @@
+src
+    |--app 
+        |-- [+] components
+            |-- [+] handbag
+               |-- hangbag.component.html | scss | spec.ts | ts 
+            |-- [+] login 
+               |-- login.component.html | scss | spec.ts | ts 
+            |-- [+] search-nav
+               |-- search-nav.component.html | scss | spec.ts | ts 
+            |-- [+] slidertext
+               |-- slidertext.component.html | scss | spec.ts | ts 
+        |
+        |-- core
+        |
+        |-- modules 
+        |
+        |-- [+] pages
+            |-- [+] account
+                |-- [+] components
+                |-- [+] pages
+                    |-- [+] orders
+                        |-- orders.component.html | scss | spec.ts | ts 
+                    |-- [+]settings
+                        |-- settings.component.html | scss | spec.ts | ts
+                    |-- [+] wishlist
+                        |-- wishlist.componenet.html | scss | spec.ts | ts
+                |
+                |-- account.component.html | sccs | spec.ts | ts
+            |-- [+] admin
+                |-- [+] componenet
+                    |-- [+] user-list 
+                        |-- user-list.componenet.html | scss | spec.ts | ts
+                |-- [+] pages 
+            |-- [+] carts
+                |-- carts.componenet.html | scss | spec.ts | ts
+            |-- [+] checkout
+                |-- checkout.componenet.html | scss | spec.ts | ts
+            |-- [+] customers
+                |-- customers.componenet.html | scss | spec.ts | ts
+            |-- [+] help
+                |-- help.componenet.html | scss | spec.ts | ts
+            |-- [+] home
+                |-- home.componenet.html | scss | spec.ts | ts
+            |-- [+] login-auth-home
+                |-- login-auth-home.componenet.html | scss | spec.ts | ts
+            |-- [+] payments
+                |-- payments.componenet.html | scss | spec.ts | ts
+            |-- [+] products
+                |-- products.componenet.html | scss | spec.ts | ts
+            |-- [+] register
+                |-- register.componenet.html | scss | spec.ts | ts
+            |-- [+] user
+                |-- user.componenet.html | scss | spec.ts | ts
+        |-- [+] shared
+            |-- [+] componenets
+                |-- [+] footer
+                    |-- footer.componenet.html | scss | spec.ts | ts
+                |-- [+] navigation
+                    |-- navigation.componenet.html | scss | spec.ts | ts
+            |-- [+] directives
+            |-- [+] guards 
+            |-- [+] mocks
+            |-- [+] modals
+                |-- [+] login-dialog 
+                    |-- login-dialog.componenet.html | scss | spec.ts | ts
+            |-- [+] models 
+                |-- user.ts
+            |-- [+] modules
+                |-- [+] materials
+                    |-- materials.module.spce.ts
+            |-- [+] pipes
+            |-- [+] services
+                |-- [+] authentication
+                    |-- authentication.service.spec.ts | ts 
+                |-- [+] google-maps
+                    |-- mapping.service.spec.ts
+                |-- [+] user
+                    |-- user.service.spec.ts
+            |-- [+] validators
+                |-- confirm-password.validators.ts
+        |
+        |-- app-routing.modules.ts
+        |-- app.component.html | sccs | spec.ts
+        |-- app.module.ts
+    |-- [+] assets
+    |-- [+] enviroment
+    |-- [+] stylesheets
+
+ToDo:
+[-] Change search-nav name to just search
+    |-- Make it into a reuseable component
+    |-- Styling not given 
+[-] Lazy Loading 
+    |-- Create Modules -> [Research | Implement]
