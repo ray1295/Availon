@@ -1,0 +1,25 @@
+/* Custpm Theme -> Set colors applied to the Material Components. */
+@import '~@angular/material/theming';
+
+// Mixin -> Block of code that lets us group CSS declarations we may resue throught site.
+@include mat-core();
+// Be sure that you only ever include this mixin once!
+
+// Variable ->
+// Mat-palette Function ->
+// A primary palette -> colors most widely used across all screens and components.
+$availon-app-primary: mat-palette($mat-orange, A400);
+// An accent palette -> colors used for the floating action button and interactive elements.
+$availon-app-accent:  mat-palette($mat-orange, A200, A400, A700,);
+// A warn palette -> colors used to convey error state.
+$availon-app-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$availon-app-theme: mat-light-theme($availon-app-primary, $availon-app-accent, $availon-app-warn);
+
+// Include theme styles for core and each component used in your app.
+@include angular-material-theme($availon-app-theme);
+
+
+// A foreground palette -> colors for text and icons.
+// A background palette -> colors used for element backgrounds.

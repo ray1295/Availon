@@ -4,7 +4,7 @@
 <!-- ngClass -> Starting with 5th log item: blue background -->
 <p *ngFor="let click of clicks" [ngClass]="{pstyle: click >=5}">{{ click }}</p>
 <!-- (click) -> Toggle display -->
-<button (click)="onButtonClicked()">Display Detail</button>
+<button color="primary" mat-raised-button (click)="onButtonClicked()">Display Detail</button>
 
 <!-- let i = index -> extracts index of *ngFor -->
 <p *ngFor="let click of clicks; let i = index"></p>

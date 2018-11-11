@@ -1,7 +1,6 @@
-/* Primary file */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+// Theme -> Set of colors applied to the Angular Material Components
 
-// Partials
+// Partials ->
 @import "stylesheets/partials/colors";
 @import "stylesheets/partials/reset";
 @import "stylesheets/partials/typography";
@@ -9,19 +8,19 @@
 @import "stylesheets/partials/buttons";
 @import "stylesheets/partials/utility";
 
-// Pages 
+// Pages ->
 @import "app/pages/register/register.component.scss";
 
-// Components SCSS
+// Components SCSS ->
 @import "app/shared/components/navigation/navigation.component.scss";
 @import "app/components/slidertext/slidertext.component.scss";
 @import "app/components/search-nav/search-nav.component.scss";
 @import "app/shared/components/footer/footer.component.scss";
 
-// Modals
+// Modals ->
 @import "app/shared/modals/login-dialog/login-dialog.component.scss";
 
-// Styles
+// Styles ->
 html, body {
   height: 100%;
   display: block;
