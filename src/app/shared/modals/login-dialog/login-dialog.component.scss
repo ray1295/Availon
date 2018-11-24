@@ -10,42 +10,96 @@
 // Modal form container 
 .form__container {
     display: inline-flex;
-    align-items: center;
     width: 100%;
     height: 100%;
     position: relative;
+    align-items: center;
+    overflow: hidden;
     // Modal form image container
     .form__image{
         flex: 1;
         display: flex;
         align-items: center;
-        padding-left: 20px;
         // Modal form image element
         &__field {
-        width: 200px;
+        width: 100%;
         }
     }
     // Modal form content
     .form__field {
-        flex: 2;
-        padding: 0 20px;
+        flex: 1;
+        padding: 0 10%;
+        width: 350px;
         // Form close button 
         &__close {
             position: absolute;
-            top: 0;
-            right: 0;
+            top: 4%;
+            right: 2%;
             border: none;
             padding: 10px;
             text-align: right;
+            i {
+                font-size: 18px;
+                color: $color-text-gray;
+            }
         }
-        // Register text 
-        &__register {
-            font-size: 16px; 
-            margin-bottom: 20px;
+        // Headline
+        &__headline {
+            font-weight: 400;
+            text-transform: uppercase;
+        } 
+        // Divider 
+        &__divider {
+            display: inline-block;
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 0.2;
+            position: relative;
+            width: 100%;
+            margin: 10% 0;
+            &::after,
+            &::before {
+                content: '';
+                position: absolute;
+                border-top: 1px solid $color-text-gray;
+                width: 40%;
+            }
+            &::after {
+                left: 50%;
+                margin-left: 10%;
+            }
+            &::before {
+                right: 50%;
+                margin-right: 10%;
+            }
+        }
+        // Form Google sign in 
+        &__gSignIn {
+            background: $color-white;
+            color: #757575;
+            height: 42px;
+            width: 100%;
+            margin-top: 10%;
+            font-size: 14px !important;
+            position: relative;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,.25);
+            border-radius: 1px; 
+            img {
+                margin: auto;
+                position: absolute;
+                width: 24px;
+                left: 10px;
+                top: 0;
+                bottom: 0;
+            }
         }
         // Form content wrapper  
         .mat-dialog-content {
             overflow: hidden;
+        }
+        // Form sub-headings 
+        &__sub-heading {
+            font-weight: 500;
         }
         // Form inputs 
         &__input {
@@ -60,14 +114,20 @@
                 align-items: center;
                 flex: 1;
                 padding: 0;
+                justify-content: flex-end;
             }
             // Action buttons 
             button {
                 border: none;
                 background-color: $color-bright; 
                 color: $color-white; 
-                padding: 10px 30px;
+                padding: 10px;
+                width: 100%;
+                margin: 10% 0 5%;
+                text-transform: uppercase;
             }
         }
+        // Register text 
+        &__register { }
     }
 }

@@ -34,3 +34,24 @@ a {
 .mat-toolbar {
   font: 400 13px/24px Roboto,"Helvetica Neue",sans-serif;
 }
+
+// Angular Material Resets
+.mat-dialog-container {
+  padding: 0px !important;
+  overflow: hidden !important;
+}
+.mat-form-field-infix {
+  border-top: 0.5em solid transparent !important;
+}
+.mat-dialog-content {
+  max-height: unset !important;
+}
+.mat-dialog-actions {
+  padding: 0 !important;
+  margin-bottom: 0px !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-start,
+.mat-form-field-appearance-outline .mat-form-field-outline-end {
+  border-radius: 0 !important;
+}

@@ -1,9 +1,11 @@
 <!-- Login modal-->
+
 <div class="form__container">
   <!-- Login modal image -->
   <div class="form__image">
     <img class="form__image__field" src="{{ loginModalPath }}">
   </div>
+
   <!-- Login modal form -->
   <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
     <div class="form__field">
@@ -14,30 +16,44 @@
             close
           </i>
         </button>
-        <!-- Sign up redirect message/button -->
-        <p class="form__field__register">Don't have an account?
-          <a class="bright" routerLink="register" (click)="onCloseCancel()"> Sign up.</a>
-        </p>
+        <!-- Headline -> Sign in -->
+        <h3 class="form__field__headline">Sign In</h3>
+        <!-- #[#[INCOMPLETE]#]#: Google SignIn Integration -->
+        <mat-dialog-actions>
+          <button class="form__field__gSignIn" id="googleBtn">
+            <img src="{{ googleSignIn }}" alt="">
+            Sign in with Google
+          </button>
+        </mat-dialog-actions>
+        <!-- Divider -->
+        <span class="form__field__divider">or</span>
         <!-- Username and email input -->
-        <mat-form-field class="form__field__input">
-          <input matInput placeholder="Username or Email" formControlName="email">
+        <h6 class="form__field__sub-heading">Sign in with your email</h6>
+        <mat-form-field class="form__field__input" appearance="outline">
+          <input matInput placeholder="myemail@gmail.com" formControlName="email">
         </mat-form-field>
         <!-- Password input -->
-        <mat-form-field class="form__field__input">
-          <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password">
+        <h6 class="form__field__sub-heading">Password</h6>
+        <mat-form-field class="form__field__input" appearance="outline">
+          <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
           <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
         </mat-form-field>
       </mat-dialog-content>
       <!-- Action buttons -->
       <mat-dialog-actions class="form__field__actions">
         <!-- Forgotten password -->
-        <!-- [INCOMPLETE]: Create forgotten password page -->
-        <a class="bright" routerLink="">Forgot your passwrod?</a>
+        <!-- #[#[INCOMPLETE]#]#: Create forgotten password page -->
+        <mat-checkbox>Keep me logged in</mat-checkbox>
+        <a class="bright" routerLink="">Forgotten passwrod?</a>
         <!-- Submit button  -->
-        <!-- [INCOMPLETE]: oncloseConfirm function to login user in -->
+        <!-- #[#[INCOMPLETE]#]#: oncloseConfirm function to login user in -->
         <button type="submit" [disabled]="!loginForm.valid">Sign In</button>
       </mat-dialog-actions>
       <!-- End of action button -->
+      <!-- Sign up redirect message/button -->
+      <p class="form__field__register">New here?
+        <a class="bright" routerLink="register" (click)="onCloseCancel()">Create account</a>
+      </p>
     </div>
   </form>
   <!-- End of login form -->

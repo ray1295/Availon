@@ -32,8 +32,8 @@ export class LoginComponent implements OnInit {
   constructor(public dialog: MatDialog) {}
     openDialog(): void {
       let dialogRef = this.dialog.open(LoginDialogComponent, {
-        height: '400px',
-        width: '600px',
+        height: '500px',
+        width: '700px',
         data: {
           user: this.user,
           email: this.email,
