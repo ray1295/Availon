@@ -16,7 +16,7 @@ import { PreferencesComponent } from './pages/admin/components/preferences/prefe
 import { ReturnsComponent } from './pages/admin/components/returns/returns.component';
 import { VouchersComponent } from './pages/admin/components/vouchers/vouchers.component';
 import { OverviewComponent } from './pages/admin/components/overview/overview.component';
-
+import { BusinessProductsComponent } from './pages/admin/components/business-products/business-products.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: LoginAuthHomeComponent },
@@ -35,7 +35,9 @@ const routes: Routes = [
       {path: 'preferences', component: PreferencesComponent },
       {path: 'returns', component: ReturnsComponent },
       {path: 'vouchers', component: VouchersComponent },
+      {path: 'products', component: BusinessProductsComponent},
       {path: 'overview', component: OverviewComponent },
+      { path: '', redirectTo: 'overview', pathMatch: 'full' },
     ] 
   },
 ];
@@ -47,4 +49,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [HelpComponent, CheckoutComponent, HomeComponent, WishlistComponent, LoginAuthHomeComponent, AddressBookComponent, ContactDataComponent, OrdersComponent, UserListComponent, PreferencesComponent, ReturnsComponent, VouchersComponent, OverviewComponent]
+export const routingComponents = [HelpComponent, CheckoutComponent, HomeComponent, WishlistComponent, LoginAuthHomeComponent, AddressBookComponent, ContactDataComponent, OrdersComponent, UserListComponent, PreferencesComponent, ReturnsComponent, VouchersComponent, OverviewComponent, BusinessProductsComponent]

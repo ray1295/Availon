@@ -1,0 +1,19 @@
+.bprod-list{
+    display: inline-flex;
+    flex-wrap: wrap;
+    .bprod-item__card {
+        margin: 5% 0;
+    }
+    .bprod-item__img {
+        width: 100%;
+    }
+    .bprod-item__content {
+        p {
+            display: block;
+        }
+    }
+    .bprod-item__actions {
+        display: flex;
+        justify-content: space-around;
+    }
+}

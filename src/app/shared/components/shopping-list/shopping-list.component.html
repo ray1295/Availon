@@ -1,11 +1,26 @@
-<div class="shopping-list">
+<div class="shp-list">
   <!-- Shopping Edit -> Add new products or exisiting ones -->
-  <div class="shopping-list__edit">
+  <div class="shp-list__edit">
     <app-shopping-edit></app-shopping-edit>
     <hr>
-    <ul>
+    <ul class="shp-list__items">
       <a *ngFor="let item of items">
-        {{ item.name }} ({{ item.amount }})
+        <mat-card class="shp-list__item">
+          <mat-card-header>
+            <mat-card-title>
+                Amount left : ({{ item.amount }})
+            </mat-card-title>
+          </mat-card-header>
+          <!--#INCOMPLETE# -> Recieve item image -->
+          <img mat-card-image src="" alt="">
+          <mat-card-content>
+            <!--#INCOMPLETE# -> Recieve item price -->
+            <!--#INCOMPLETE# -> Recieve the item category-->
+            <p>
+                {{ item.name }} 
+            </p>
+          </mat-card-content>
+        </mat-card>
       </a>
     </ul>
   </div>

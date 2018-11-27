@@ -1,0 +1,29 @@
+<div class="bprod-list">
+    <!-- Add new product -->
+    <button mat-raised-button>New Product</button>
+    <!-- Business Product Items -->
+    <!-- Directive [*ngFor] -> Used to loop code on template -> Last name is the same as property -->
+    <!--#INCOMPLETE# -> Make items clickable -->
+    <mat-card class="bprod-item__card" routerLink="" *ngFor="let product of products">
+        <!-- String interpolation + Property Binding -->
+        <img class="bprod-item__img" mat-card-image [src]="product.imagePath" alt="{{ product.name }}" />
+        <!-- Item Information -->
+        <mat-card-content class="bprod-item__content">
+            <!-- String interpolation -->
+            <p>{{ product.name }}</p>
+            <!-- String interpolation -->
+            <p>{{ product.category }}</p>
+            <!-- String interpolation -->
+            <p>{{ product.description }}</p>
+            <!-- String interpolation -->
+            <p>{{ product.price }}</p>
+        </mat-card-content>
+        <!-- Item action buttons -->
+        <mat-card-actions class="bprod-item__actions">
+            <button mat-raised-button>Edit</button>
+            <button mat-raised-button>Delete</button>
+        </mat-card-actions>
+    </mat-card>
+    <!-- Component -> Business Prodcut Item -->
+    <app-business-products-item></app-business-products-item>
+</div>

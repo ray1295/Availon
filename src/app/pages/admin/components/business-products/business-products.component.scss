@@ -1,0 +1,9 @@
+.bprods {
+    display: flex;
+    &__list{
+        flex: 2;
+    }
+    &__details {
+        flex: 4;
+    }
+}

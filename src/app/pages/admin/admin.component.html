@@ -4,8 +4,7 @@
             <h6>my account</h6>
             <li class="admin__drawer__list-item" routerLink="overview">my overview</li>
             <li class="admin__drawer__list-item" routerLink="orders">my orders</li>
-            <!--#INCOMPLETE# -> Move product components to admin -->
-            <li class="admin__drawer__list-item" routerLink="">my products</li>
+            <li class="admin__drawer__list-item" routerLink="products">my products</li>
             <!--#INCOMPLETE# -> Create return item component (zalando) -->
             <li class="admin__drawer__list-item" routerLink="returns">my returns</li>
             <li class="admin__drawer__list-item" routerLink="contacts">change contact data</li>
@@ -20,8 +19,6 @@
     </mat-drawer>
     <mat-drawer-content class="admin__content">
         <router-outlet></router-outlet>
-        <!-- Recipe == Product -->
-        <app-products></app-products>
     </mat-drawer-content>
 </mat-drawer-container>
 

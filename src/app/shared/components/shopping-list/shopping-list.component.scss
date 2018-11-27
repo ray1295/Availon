@@ -1,6 +1,13 @@
-.shopping-list{
+.shp-list{
     display: flex;
     &__edit{
         flex: 1;
+    }
+    &__items {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        width: 100%;
     }
 }
