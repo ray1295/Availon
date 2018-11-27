@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  logoPath: string = '/assets/images/availon_text_logo.png';
+  logoPath: string = '/assets/images/availon_dark_text_logo.png';
 
   constructor() { }
 

@@ -53,8 +53,7 @@
   }
   // Logo element
   &__logo {
-    width: 140px;
-    height: 26px;
+    height: 20px;
   }
   // Routing links 
   &__routes {
@@ -82,15 +81,13 @@
     align-items: center;
     margin: 0 5px;
     &__input {
-      border: solid 1px $color-gray !important;
-      width: 70px !important;
-      height: 32px;
-      padding: 0 10px !important;
-      border-radius: 10em;
+      border-bottom: solid 1px #888888 !important;
+      width: 50px !important;
+      height: 22px;
       transition: all .5s;
       &:focus,
-      &:hover {
-          width: 150px !important;
+      &:active {
+          width: 100px !important;
       }
     }
   }
@@ -100,12 +97,14 @@
   height: 48px !important;
   justify-content: center;
   box-shadow: 0 1px 5px 0 rgba(0,0,0,.1);
+  padding: 0 !important;
   // Shopping category 
   &__category-bar {
     height: 100%;
     width: 100%;
-    justify-content: center;
     display: inline-flex;
+    justify-content: flex-start;
+    margin-left: 5%;
     align-items: center;
     // Reset menu panel (dropdown menu)
     &-items {
@@ -118,22 +117,21 @@
   }
   // Shopping caterogry section
   &__bar {
-    border: none;
+    border: 2px solid transparent;
     border-radius: 0;
     padding: 0;
-    margin: 0 10px;
+    margin-right: 20px;
     height: 48px;
     min-width: 40px;
     text-align: center;
     text-transform: uppercase;
     display: inline-block;
+    position: relative;
     // Menu panel category text hover effect 
     &:hover,
     &:active,
     &:focus {
-    color: $color-gray;
     border-bottom: 2px solid;
-    position: relative;
     }
     // Menu panel columns
     &__col {

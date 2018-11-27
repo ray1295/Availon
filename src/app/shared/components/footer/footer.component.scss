@@ -94,11 +94,12 @@ footer {
         margin: 3% 0;
     }
         &__top{
-            display: inline-flex;
+            display: flex;
             width: 100%;
+            justify-content: space-evenly;
             ul {
                 flex: 1;
-                display: inline-flex;
+                display: flex;
             }
             &-left {
                 // Country location
@@ -114,9 +115,7 @@ footer {
                 }
             }
             &-right {
-                li{
-                    padding-left: 24px;                
-                }
+                justify-content: space-between;
             }   
         }
         &__btm {

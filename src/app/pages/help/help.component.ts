@@ -14,4 +14,14 @@ export class HelpComponent implements OnInit {
   ngOnInit() {
   }
 
+  profit = 0;
+
+  
+  
+
+
+  // Declaraing the array name
+  trade: Array<number> = [];
+
+
 }

@@ -49,11 +49,17 @@ import { UserService } from './shared/services/user/user.service';
 import { MappingService } from './shared/services/google-maps/mapping.service';
 
 import { GooglePlacesDirective } from './shared/directives/google-places/google-places.directive';
+import { ReturnsComponent } from './pages/admin/components/returns/returns.component';
+import { ContactDataComponent } from './pages/admin/components/contact-data/contact-data.component';
+import { AddressBookComponent } from './pages/admin/components/address-book/address-book.component';
+import { VouchersComponent } from './pages/admin/components/vouchers/vouchers.component';
+import { PreferencesComponent } from './pages/admin/components/preferences/preferences.component';
+import { OverviewComponent } from './pages/admin/components/overview/overview.component';
 
 
 
 @NgModule({
-  declarations: [AppComponent, routingComponents, HomeComponent, UserComponent, UserListComponent, RegisterComponent, NavigationComponent, SlidertextComponent, WishlistComponent, HandbagComponent, MenCatgComponent, NewinCatComponent, SalesCatgComponent, WomenCatgComponent, BoysCatgComponent, GirlsCatgComponent, ShoesCatgComponent, AccessoriesCatgComponent, SportsCatgComponent, LoginComponent, LoginDialogComponent, SearchNavComponent, FooterComponent, LoginAuthHomeComponent, AccountComponent, SettingsComponent, OrdersComponent, ProductsComponent, PaymentsComponent, CustomersComponent, CartsComponent, GooglePlacesDirective, ProductDetailComponent, ProductListComponent, ProductItemComponent, ShoppingListComponent, ShoppingEditComponent, AdminComponent],
+  declarations: [AppComponent, routingComponents, HomeComponent, UserComponent, UserListComponent, RegisterComponent, NavigationComponent, SlidertextComponent, WishlistComponent, HandbagComponent, MenCatgComponent, NewinCatComponent, SalesCatgComponent, WomenCatgComponent, BoysCatgComponent, GirlsCatgComponent, ShoesCatgComponent, AccessoriesCatgComponent, SportsCatgComponent, LoginComponent, LoginDialogComponent, SearchNavComponent, FooterComponent, LoginAuthHomeComponent, AccountComponent, SettingsComponent, OrdersComponent, ProductsComponent, PaymentsComponent, CustomersComponent, CartsComponent, GooglePlacesDirective, ProductDetailComponent, ProductListComponent, ProductItemComponent, ShoppingListComponent, ShoppingEditComponent, AdminComponent, ReturnsComponent, ContactDataComponent, AddressBookComponent, VouchersComponent, PreferencesComponent, OverviewComponent],
   imports: [BrowserModule, AgmCoreModule.forRoot({apiKey: 'AIzaSyA5xED-2pjebyv_OEDp8ZVZIza4jDCoUlw',  libraries: ["places"]}), AppRoutingModule, MaterialsModule, HttpClientModule, BrowserAnimationsModule, FormsModule, ReactiveFormsModule, HttpModule],
   exports: [FormsModule, ReactiveFormsModule],
   providers: [UserService, UserListComponent, MappingService],

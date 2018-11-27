@@ -1,2 +1,31 @@
-<!-- Recipe == Product -->
-<app-products></app-products>
+<mat-drawer-container class="admin">
+    <mat-drawer class="admin__drawer" mode="side" opened>
+        <ul class="admin__drawer__list">
+            <h6>my account</h6>
+            <li class="admin__drawer__list-item" routerLink="overview">my overview</li>
+            <li class="admin__drawer__list-item" routerLink="orders">my orders</li>
+            <!--#INCOMPLETE# -> Move product components to admin -->
+            <li class="admin__drawer__list-item" routerLink="">my products</li>
+            <!--#INCOMPLETE# -> Create return item component (zalando) -->
+            <li class="admin__drawer__list-item" routerLink="returns">my returns</li>
+            <li class="admin__drawer__list-item" routerLink="contacts">change contact data</li>
+            <li class="admin__drawer__list-item" routerLink="addresses">my address book</li>
+            <li class="admin__drawer__list-item" routerLink="vouchers">my vouchers</li>
+            <!--#INCOMPLETE# -> Move wishlist to admin section -->
+            <li class="admin__drawer__list-item" routerLink="">my wishlist</li>
+            <li class="admin__drawer__list-item" routerLink="preferences">my preferences</li>
+            <li class="admin__drawer__list-item" routerLink="">edit password</li>
+            <li class="admin__drawer__list-item" routerLink="">sign out</li>
+        </ul>
+    </mat-drawer>
+    <mat-drawer-content class="admin__content">
+        <router-outlet></router-outlet>
+        <!-- Recipe == Product -->
+        <app-products></app-products>
+    </mat-drawer-content>
+</mat-drawer-container>
+
+
+<!-- <p [(ngModel)]="showConfig()">
+    {{ printData }}
+</p> -->
