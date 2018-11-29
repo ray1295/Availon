@@ -15,7 +15,15 @@
   margin-bottom: 5%;
 }
 
- // Reset mat-menu
+// Top Navbar 
+.navbar-top {
+  height: 48px !important;
+  padding: 0 5% !important;
+  line-height: 48px;
+  color: $color-dark;
+  border-bottom: 1px solid $color-light-gray;
+  text-transform: capitalize;
+   // Reset mat-menu
  // [INCOMPLETE]: Pass mat-menu-panel reset for only certain elements
 .mat-menu-panel {
   position: relative;
@@ -30,14 +38,6 @@
   display: flex;
 }
 
-// Top Navbar 
-.navbar-top {
-  height: 48px !important;
-  padding: 0 5% !important;
-  line-height: 48px;
-  color: $color-dark;
-  border-bottom: 1px solid $color-light-gray;
-  text-transform: capitalize;
   // Discount wrapper 
   &__discount-wrapper {
     flex: 5;

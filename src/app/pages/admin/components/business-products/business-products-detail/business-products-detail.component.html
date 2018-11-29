@@ -1,3 +1,29 @@
-<p>
-  business-products-detail works!
-</p>
+<!-- Component -> Specific Product detail  -->
+<div class="bprods-detail">
+  <!-- Product Image -->
+  <img src="" alt="">
+
+</div>
+
+<div>
+  <!-- Product Name -->
+  <h1></h1>
+</div>
+
+<div>
+  <!-- Dropdown -> Product Button -->
+  <button mat-raised-button [matMenuTriggerFor]="menu" >Manage Product</button>
+  <mat-menu #menu="matMenu" [overlapTrigger]="false">
+    <button type="button" mat-menu-item>Add Product</button>
+    <button type="button" mat-menu-item>Edit Product</button>
+    <button type="button" mat-menu-item>Delete Product</button>
+  </mat-menu>
+</div>
+
+<div>
+  <!-- Product description -->
+</div>
+
+<div>
+  <!-- Products similar products / buy the look -->
+</div>

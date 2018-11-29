@@ -1,18 +1,2 @@
-<!-- *ngIf -> Vanishing Paragraph -->
-<p *ngIf="display">Click button to vanish</p>
-<!-- *ngFor -> Logging click in array list -->
-<!-- ngClass -> Starting with 5th log item: blue background -->
-<p *ngFor="let click of clicks" [ngClass]="{pstyle: click >=5}">{{ click }}</p>
-<!-- (click) -> Toggle display -->
-<button color="primary" mat-raised-button (click)="onButtonClicked()">Display Detail</button>
-
-<!-- let i = index -> extracts index of *ngFor -->
-<p *ngFor="let click of clicks; let i = index"></p>
-
-<!-- Shopping list -->
+<!-- Component -> Porducts shopping list -->
 <app-shopping-list></app-shopping-list>
-<!--#
-ToDo:
------
-[1] Home
-#-->

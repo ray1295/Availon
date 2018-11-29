@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from '../../../../../../shared/services/products/products.service';
 
 @Component({
   selector: 'app-business-products-item',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BusinessProductsItemComponent implements OnInit {
 
-  constructor() { }
+  product: string;
+  editProduct: string;
+  
+  // Dependency Injection -> INjecting the service. 
+  constructor(private productsService:ProductsService) { }
 
+  // subscribe() method -> Subscribing to the cast observable so anytime theres a change it is synced with the shoppoing-list component.
   ngOnInit() {
+    this.productsService.cast.subscribe(product => this.product = product)
+  }
+
+  editTheProduct() {
+    this.productsService.editProduct(this.editProduct)
   }
 
 }

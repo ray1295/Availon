@@ -1,27 +1,53 @@
 <div class="shp-list">
+
+  <h1>one: {{ product }}</h1>
   <!-- Shopping Edit -> Add new products or exisiting ones -->
   <div class="shp-list__edit">
+    <!-- Component -> Seller product shopping list management-->
     <app-shopping-edit></app-shopping-edit>
+
     <hr>
-    <ul class="shp-list__items">
+    <!-- Component ->  -->
+    <!-- <ul class="shp-list__items">
       <a *ngFor="let item of items">
         <mat-card class="shp-list__item">
           <mat-card-header>
             <mat-card-title>
-                Amount left : ({{ item.amount }})
+              Amount left : ({{ item.amount }})
             </mat-card-title>
           </mat-card-header>
-          <!--#INCOMPLETE# -> Recieve item image -->
           <img mat-card-image src="" alt="">
           <mat-card-content>
-            <!--#INCOMPLETE# -> Recieve item price -->
-            <!--#INCOMPLETE# -> Recieve the item category-->
             <p>
-                {{ item.name }} 
+              {{ item.name }}
             </p>
           </mat-card-content>
         </mat-card>
       </a>
-    </ul>
+    </ul> -->
+
+    <!-- Business Product Items -->
+    <!-- Directive [*ngFor] -> Used to loop code on template -> Last name is the same as property -->
+    <!--#INCOMPLETE# -> Make items clickable -->
+    <mat-card class="bprod-item__card" routerLink="" *ngFor="let product of products">
+      <!-- String interpolation + Property Binding -->
+      <img class="bprod-item__img" mat-card-image [src]="product.imagePath" alt="{{ product.name }}" />
+      <!-- Item Information -->
+      <mat-card-content class="bprod-item__content">
+        <!-- String interpolation -->
+        <p class="text-imp">{{ product.name }}</p>
+        <!-- String interpolation -->
+        <p>{{ product.category }}</p>
+        <!-- String interpolation -->
+        <p class="text-imp">£ {{ product.price }}</p>
+      </mat-card-content>
+      <!-- Item action buttons -->
+      <mat-card-actions class="bprod-item__actions">
+        <button mat-raised-button>Edit</button>
+        <button mat-raised-button>Delete</button>
+      </mat-card-actions>
+    </mat-card>
+
   </div>
+
 </div>
