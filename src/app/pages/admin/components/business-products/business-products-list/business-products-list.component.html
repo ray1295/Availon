@@ -19,12 +19,12 @@
             <p>{{ product.category }}</p>
             <!-- String interpolation -->
             <p class="text-imp">£ {{ product.price }}</p>
+            <!-- Item action buttons -->
+            <mat-card-actions class="bprod-item__actions">
+                <button mat-raised-button>Edit</button>
+                <button mat-raised-button>Delete</button>
+            </mat-card-actions>
         </mat-card-content>
-        <!-- Item action buttons -->
-        <mat-card-actions class="bprod-item__actions">
-            <button mat-raised-button>Edit</button>
-            <button mat-raised-button>Delete</button>
-        </mat-card-actions>
     </mat-card>
 
     <!-- Component -> Business Prodcut Item -->

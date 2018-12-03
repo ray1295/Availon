@@ -8,7 +8,6 @@ import { Product } from '../../../../../shared/models/products';
 })
 export class BusinessProductsListComponent implements OnInit {
 
-
   products: Product[] = [
     new Product('Name Test', 'Category Test', 'Description Test', '../../../../../assets/images/sharon-garcia-486594-unsplash.jpg', 'Price Test'  ),
     new Product('Name Test', 'Category Test', 'Description Test', '../../../../../assets/images/sharon-garcia-486594-unsplash.jpg', 'Price Test'  )
