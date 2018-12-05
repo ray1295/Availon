@@ -1,0 +1,28 @@
+<div class="users">
+
+  <h1>Users</h1>
+  <button (click)="newUser()">Add User</button>
+
+
+  <ul *ngIf="users">
+    <!-- Directive -> Iterable -->
+    <li class="users__user" *ngFor="let user of users">
+      <mat-card>
+
+        <mat-card-header>
+          <img mat-card-avatar class="users__user__header-image" src="{{ user.avatar_url }}" alt="Photo of a {{ user.name }}">
+          <!-- Username-->
+          <mat-card-title>{{ user.login }}</mat-card-title>
+          <!-- Email -->
+          <mat-card-subtitle>Admin: {{ user.site_admin }}</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-actions class="users__user__actions">
+          <button>delete</button>
+          <button>edit</button>
+        </mat-card-actions>
+
+      </mat-card>
+    </li>
+  </ul>
+</div>

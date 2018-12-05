@@ -1,0 +1,33 @@
+.users {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__user {
+        width: 230px;
+        height: 100%;
+        margin-bottom: 30px;
+        .mat-card {
+            padding: 5%;
+            padding-bottom: 0;
+        }
+        .mat-card-title {
+            margin-bottom: 10%;
+            text-transform: capitalize;
+            font-weight: 500;
+        }    
+        .mat-card-subtitle {
+            margin-bottom: 0;
+        }
+        &__header-image {
+            // background-image: url('{{user.avatar_url}}');
+            background-size: cover;
+        }
+        &__actions {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0;
+        }
+    }
+}

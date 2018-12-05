@@ -17,9 +17,10 @@ export class UserComponent implements OnInit {
     private _userService: UserService,
     @Inject(MAT_DIALOG_DATA) public data: any) { }
 
-    onNoClick(): void {
-      this.dialogRef.close();
-    }
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
   ngOnInit() {
     this._userForm = this._formBuilder.group({
       ID: [],
@@ -29,9 +30,9 @@ export class UserComponent implements OnInit {
     });
   }
 
-  onSubmit() {
-    this._userService.addUser(this._userForm.value);
-    this.dialogRef.close();
-  }
+  // onSubmit() {
+  //   this._userService.addUser(this._userForm.value);
+  //   this.dialogRef.close();
+  // }
 
 }

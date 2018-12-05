@@ -17,6 +17,8 @@ import { ReturnsComponent } from './pages/admin/components/returns/returns.compo
 import { VouchersComponent } from './pages/admin/components/vouchers/vouchers.component';
 import { OverviewComponent } from './pages/admin/components/overview/overview.component';
 import { BusinessProductsComponent } from './pages/admin/components/business-products/business-products.component';
+import { UsersComponent } from './pages/admin/components/users/users.component';
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: LoginAuthHomeComponent },
@@ -24,21 +26,24 @@ const routes: Routes = [
   { path: 'checkout', component: CheckoutComponent },
   { path: 'wishlist', component: WishlistComponent },
   { path: 'register', component: RegisterComponent },
-  { 
-    path: 'admin', 
+  {
+    path: 'admin',
     component: AdminComponent,
     children: [
-      {path: 'addresses', component: AddressBookComponent },
-      {path: 'contacts', component: ContactDataComponent },
-      {path: 'orders', component: OrdersComponent },
-      {path: 'users', component: UserListComponent },
-      {path: 'preferences', component: PreferencesComponent },
-      {path: 'returns', component: ReturnsComponent },
-      {path: 'vouchers', component: VouchersComponent },
-      {path: 'products', component: BusinessProductsComponent},
-      {path: 'overview', component: OverviewComponent },
+      { path: 'addresses', component: AddressBookComponent },
+      { path: 'contacts', component: ContactDataComponent },
+      { path: 'orders', component: OrdersComponent },
+      // Delete UserList component after implementing new user component.
+      { path: 'user', component: UserListComponent },
+
+      { path: 'preferences', component: PreferencesComponent },
+      { path: 'returns', component: ReturnsComponent },
+      { path: 'vouchers', component: VouchersComponent },
+      { path: 'products', component: BusinessProductsComponent },
+      { path: 'users', component: UsersComponent },
+      { path: 'overview', component: OverviewComponent },
       { path: '', redirectTo: 'overview', pathMatch: 'full' },
-    ] 
+    ]
   },
 ];
 
@@ -49,4 +54,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [HelpComponent, CheckoutComponent, HomeComponent, WishlistComponent, LoginAuthHomeComponent, AddressBookComponent, ContactDataComponent, OrdersComponent, UserListComponent, PreferencesComponent, ReturnsComponent, VouchersComponent, OverviewComponent, BusinessProductsComponent]
+export const routingComponents = [HelpComponent, CheckoutComponent, HomeComponent, WishlistComponent, LoginAuthHomeComponent, AddressBookComponent, ContactDataComponent, OrdersComponent, UserListComponent, PreferencesComponent, ReturnsComponent, VouchersComponent, OverviewComponent, BusinessProductsComponent,
+  UsersComponent]
