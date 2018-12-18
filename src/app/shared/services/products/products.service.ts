@@ -1,4 +1,4 @@
-// Services are a way to share information among components that don't know each other. 
+// Services are a way to share information among components that don't know each other.
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Product } from '../../models/products';
@@ -19,6 +19,6 @@ export class ProductsService {
 
   // Next() method -> Replace the value of _product.
   editProduct(newProduct) {
-    this._product.next(newProduct)
+    this._product.next(newProduct);
   }
 }

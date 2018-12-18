@@ -10,13 +10,13 @@ import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { RegisterComponent } from "./pages/register/register.component";
+import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { LoginDialogComponent } from './shared/modals/login-dialog/login-dialog.component';
 import { UserComponent } from './pages/user/user.component';
 import { UserListComponent } from './pages/admin/components/user-list/user-list.component';
-import { NavigationComponent } from "./shared/components/navigation/navigation.component";
-import { SlidertextComponent } from "./components/slidertext/slidertext.component";
+import { NavigationComponent } from './shared/components/navigation/navigation.component';
+import { SlidertextComponent } from './components/slidertext/slidertext.component';
 import { WishlistComponent } from './pages/account/pages/wishlist/wishlist.component';
 import { HandbagComponent } from './components/handbag/handbag.component';
 import { MenCatgComponent } from './shared/components/navigation/categories/men-catg/men-catg.component';
@@ -43,12 +43,6 @@ import { ProductListComponent } from './pages/products/product-detail/product-li
 import { ProductItemComponent } from './pages/products/product-detail/product-list/product-item/product-item.component';
 import { ShoppingListComponent } from './shared/components/shopping-list/shopping-list.component';
 import { AdminComponent } from './pages/admin/admin.component';
-
-import { UserService } from './shared/services/user/user.service';
-import { MappingService } from './shared/services/google-maps/mapping.service';
-import { ProductsService } from './shared/services/products/products.service';
-
-import { GooglePlacesDirective } from './shared/directives/google-places/google-places.directive';
 import { ReturnsComponent } from './pages/admin/components/returns/returns.component';
 import { ContactDataComponent } from './pages/admin/components/contact-data/contact-data.component';
 import { AddressBookComponent } from './pages/admin/components/address-book/address-book.component';
@@ -61,14 +55,91 @@ import { BusinessProductsDetailComponent } from './pages/admin/components/busine
 import { BusinessProductsItemComponent } from './pages/admin/components/business-products/business-products-list/business-products-item/business-products-item.component';
 import { UsersComponent } from './pages/admin/components/users/users.component';
 
+import { UserService } from './shared/services/user/user.service';
+import { MappingService } from './shared/services/google-maps/mapping.service';
+import { ProductsService } from './shared/services/products/products.service';
+
+import { GooglePlacesDirective } from './shared/directives/google-places/google-places.directive';
+
 
 
 @NgModule({
-  declarations: [AppComponent, routingComponents, HomeComponent, UserComponent, UserListComponent, RegisterComponent, NavigationComponent, SlidertextComponent, WishlistComponent, HandbagComponent, MenCatgComponent, NewinCatComponent, SalesCatgComponent, WomenCatgComponent, BoysCatgComponent, GirlsCatgComponent, ShoesCatgComponent, AccessoriesCatgComponent, SportsCatgComponent, LoginComponent, LoginDialogComponent, SearchNavComponent, FooterComponent, LoginAuthHomeComponent, AccountComponent, SettingsComponent, OrdersComponent, ProductsComponent, PaymentsComponent, CustomersComponent, CartsComponent, GooglePlacesDirective, ProductDetailComponent, ProductListComponent, ProductItemComponent, ShoppingListComponent, AdminComponent, ReturnsComponent, ContactDataComponent, AddressBookComponent, VouchersComponent, PreferencesComponent, OverviewComponent, BusinessProductsComponent, BusinessProductsListComponent, BusinessProductsDetailComponent, BusinessProductsItemComponent, UsersComponent],
-  imports: [BrowserModule, AgmCoreModule.forRoot({apiKey: 'AIzaSyA5xED-2pjebyv_OEDp8ZVZIza4jDCoUlw',  libraries: ["places"]}), AppRoutingModule, MaterialsModule, HttpClientModule, BrowserAnimationsModule, FormsModule, ReactiveFormsModule, HttpModule],
-  exports: [FormsModule, ReactiveFormsModule],
-  providers: [UserService, UserListComponent, MappingService, ProductsService],
-  entryComponents: [UserComponent, RegisterComponent, LoginDialogComponent],
+  declarations: [
+    AppComponent,
+    routingComponents,
+    HomeComponent,
+    UserComponent,
+    UserListComponent,
+    RegisterComponent,
+    NavigationComponent,
+    SlidertextComponent,
+    WishlistComponent,
+    HandbagComponent,
+    MenCatgComponent,
+    NewinCatComponent,
+    SalesCatgComponent,
+    WomenCatgComponent,
+    BoysCatgComponent,
+    GirlsCatgComponent,
+    ShoesCatgComponent,
+    AccessoriesCatgComponent,
+    SportsCatgComponent,
+    LoginComponent,
+    LoginDialogComponent,
+    SearchNavComponent,
+    FooterComponent,
+    LoginAuthHomeComponent,
+    AccountComponent,
+    SettingsComponent,
+    OrdersComponent,
+    ProductsComponent,
+    PaymentsComponent,
+    CustomersComponent,
+    CartsComponent,
+    GooglePlacesDirective,
+    ProductDetailComponent,
+    ProductListComponent,
+    ProductItemComponent,
+    ShoppingListComponent,
+    AdminComponent,
+    ReturnsComponent,
+    ContactDataComponent,
+    AddressBookComponent,
+    VouchersComponent,
+    PreferencesComponent,
+    OverviewComponent,
+    BusinessProductsComponent,
+    BusinessProductsListComponent,
+    BusinessProductsDetailComponent,
+    BusinessProductsItemComponent,
+    UsersComponent
+  ],
+  imports: [
+    BrowserModule,
+    // import HttpClientModule after BrowserModule.
+    HttpClientModule,
+    AgmCoreModule.forRoot({ apiKey: 'AIzaSyA5xED-2pjebyv_OEDp8ZVZIza4jDCoUlw', libraries: ['places'] }),
+    AppRoutingModule,
+    MaterialsModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpModule
+  ],
+  exports: [
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  providers: [
+    UserService,
+    UserListComponent,
+    MappingService,
+    ProductsService
+  ],
+  entryComponents: [
+    UserComponent,
+    RegisterComponent,
+    LoginDialogComponent],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
